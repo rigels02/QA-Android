@@ -95,7 +95,7 @@ public class FileSelectFragment extends DialogFragment
 		 *  @param fileName     - Filename. Will be null if Mode = DirectorySelector
 		 *    
 		 * */
-		public void onConfirmSelect(String absolutePath, String fileName);
+		void onConfirmSelect(String absolutePath, String fileName);
 		
 		
 		/** Allow the client activity to check file content / format whilst the user
@@ -106,7 +106,7 @@ public class FileSelectFragment extends DialogFragment
 		 *  files. 
 		 *  
 		 * */
-		public boolean isValid(String absolutePath, String fileName);
+		 boolean isValid(String absolutePath, String fileName);
 	
 	}
 

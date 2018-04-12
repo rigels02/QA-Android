@@ -130,7 +130,7 @@ public class FileSaveFragment extends DialogFragment
 		 *  @param fileName     - Filename. Not guaranteed to have a type extension.
 		 *  
 		 * */
-		public boolean onCanSave(String absolutePath, String fileName);
+		 boolean onCanSave(String absolutePath, String fileName);
 
 		/**  
 		 * Hand validated path and name to context for use.
@@ -139,7 +139,7 @@ public class FileSaveFragment extends DialogFragment
 		 *  @param absolutePath - Absolute path to target directory.
 		 *  @param fileName     - Filename. Not guaranteed to have a type extension.
 		 * */
-		public void onConfirmSave(String absolutePath, String fileName);
+		 void onConfirmSave(String absolutePath, String fileName);
 	}
 
 	/** Create new instance of a file save popup. 

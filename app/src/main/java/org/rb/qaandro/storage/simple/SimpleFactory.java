@@ -16,7 +16,7 @@ public class SimpleFactory extends AbstractStorageFactory<KNBase> {
     @Override
     protected KNBase knBaseToTypeT(org.rb.qa.model.KNBase knBase) {
         KNBase knBaseS = new KNBase();
-        List tlst = knBaseS.getQaList();
+        List<QA> tlst = knBaseS.getQaList();
         for (org.rb.qa.model.QA qa : knBase.getQaList()) {
             QA nqa = new QA(qa.getQuestion(), qa.getAnswer());
             tlst.add(nqa);
@@ -29,7 +29,7 @@ public class SimpleFactory extends AbstractStorageFactory<KNBase> {
     protected org.rb.qa.model.KNBase typeTtoKnBase(KNBase knBaseS) {
         org.rb.qa.model.KNBase knb = new org.rb.qa.model.KNBase();
         this.dataModifyDate = knBaseS.getModifyTime();
-        List  tlst = knb.getQaList();
+        List<org.rb.qa.model.QA>  tlst = knb.getQaList();
         for (QA qa : knBaseS.getQaList()) {
             org.rb.qa.model.QA nqa= new org.rb.qa.model.QA(qa.getQuestion(), qa.getAnswer());
             tlst.add(nqa);
