@@ -1,0 +1,1127 @@
+<KNBase>
+   <qaList class="java.util.ArrayList">
+      <QA>
+         <question>Q1. Explain JVM, JRE and JDK?</question>
+         <answer>
+JVM (Java Virtual Machine): 
+---------------------------
+It is an abstract machine. It is a specification that provides run-time environment in which java bytecode can be executed.
+
+JRE (Java Runtime Environment):
+--------------------------------
+
+JRE refers to a runtime environment in which java bytecode can be executed. 
+It implements the JVM (Java Virtual Machine) and provides all the class libraries and other support files that JVM uses at runtime. 
+So JRE is a software package that contains what is required to run a Java program.
+
+JDK(Java Development Kit): 
+--------------------------
+It is the tool necessary to compile, document and package Java programs. 
+The JDK completely includes JRE which contains tools for Java programmers. 
+The Java Development Kit is provided free of charge. Along with JRE, it includes an interpreter/loader, a compiler (javac), an archiver (jar), 
+a documentation generator (javadoc) and other tools needed in Java development. In short, it contains JRE + development tools.
+</answer>
+      </QA>
+      <QA>
+         <question>
+Q2. Explain public static void main(String args[]).
+			</question>
+         <answer>
+public : Public is an access modifier, which is used to specify who can access this method. 
+Public means that this Method will be accessible by any Class.
+
+static : It is a keyword in java which identifies it is class based i.e it can be accessed without creating the instance of a Class.
+
+void : It is the return type of the method. Void defines the method which will not return any value.
+
+main: It is the name of the method which is searched by JVM as a starting point for an application with a particular signature only. It is the method where the main execution occurs.
+
+String args[] : It is the parameter passed to the main method.
+			
+			</answer>
+      </QA>
+      <QA>
+         <question>Q3. Why Java is platform independent?</question>
+         <answer>
+Platform independent practically means &quot;write once run anywhere&quot;. Java is called so because of its byte codes which can run on any system irrespective of its underlying operating system.
+			</answer>
+      </QA>
+      <QA>
+         <question>Q4. Why java is not 100% Object-oriented?</question>
+         <answer>
+Java is not 100% Object-oriented because it makes use of eight primitive datatypes such as boolean, byte, char, int, float, double, long, short which are not objects.
+			</answer>
+      </QA>
+      <QA>
+         <question>Q5. What are wrapper classes?</question>
+         <answer>
+Wrapper classes converts the java primitives into the reference types (objects). Every primitive data type has a class dedicated to it. These are known as wrapper classes because they &quot;wrap&quot; the primitive data type into an object of that class. Refer to the below image which displays different primitive type, wrapper class and constructor argument. These are: Boolean, Byte, Character, Integer, Float, Double, Long, Short.
+</answer>
+      </QA>
+      <QA>
+         <question>
+        Q6. What are constructors in Java?
+    </question>
+         <answer>
+         
+        &lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 16px;&quot;&gt;Q6.&amp;nbsp;What
+are constructors in Java?&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;In Java, constructor
+refers to a block of code which is used to initialize an object.
+It must have the same name as that of the class. Also, it has no
+return type and it is automatically called when an object is
+created.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;There are two types of
+constructors:&lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;Default
+constructor&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;Parameterized
+constructor&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        
+
+    </answer>
+      </QA>
+      <QA>
+         <question>Q7. What is singleton class and how can we make a class singleton?</question>
+         <answer>Singleton class is a class whose only one instance can be created at any given time, in one JVM. A class can be made singleton by making its constructor private.
+</answer>
+      </QA>
+      <QA>
+         <question>Q8. What is the difference between Array list and vector?</question>
+         <answer>
+
+&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2 style=&quot;font-family: verdana; font-size: 16px; text-align:
+center; font-weight: bold;&quot;&gt;ArrayList vs Vector&lt;/h2&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;text-align: center; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;strong&gt;Array List&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;strong&gt;Vector&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 34px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; height: 34px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;Array List is not synchronized.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 34px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;Vector is synchronized.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 36px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; height: 36px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Array List is fast as it&apos;s
+non-synchronized.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 36px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Vector is slow as it is
+thread safe.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;If an element is inserted
+into the Array List, it increases its Array size by 50%.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Vector defaults to doubling
+size of its array.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 35.5781px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; height: 35.5781px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Array List does not define
+the increment size.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 35.5781px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Vector defines the increment
+size.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Array List can only use
+Iterator for traversing an Array List.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Except Hashtable, Vector is
+the only other class which uses both Enumeration and
+Iterator.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+</answer>
+      </QA>
+      <QA>
+         <question>Q9. What is the difference between equals() and == ?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 16px;&quot;&gt;Q9.&amp;nbsp;What
+is the difference between equals() and == ?&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;Equals()&amp;nbsp;method is
+defined in Object class in Java and used for checking equality
+of two objects defined by business logic.&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;“==” or equality operator in Java is a binary
+operator provided by Java programming language and used to
+compare primitives and objects.&amp;nbsp;&lt;/span&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif; font-size:
+14px;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;public boolean
+equals(Object o)&lt;/span&gt;&lt;/i&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;
+is the method provided by the Object class. The default
+implementation uses == operator to compare two objects. For
+example: method can be overridden like String class. equals()
+method is used to compare the values of two objects.&lt;br&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;public&lt;/code&gt;
+&lt;code class=&quot;java keyword&quot;&gt;class&lt;/code&gt; &lt;code class=&quot;java
+plain&quot;&gt;Equaltest {&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;public&lt;/code&gt;
+&lt;code class=&quot;java keyword&quot;&gt;static&lt;/code&gt; &lt;code class=&quot;java
+keyword&quot;&gt;void&lt;/code&gt; &lt;code class=&quot;java plain&quot;&gt;main(String[]
+args) {&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;String
+str1= &lt;/code&gt;&lt;code class=&quot;java keyword&quot;&gt;new&lt;/code&gt; &lt;code
+class=&quot;java plain&quot;&gt;String(“ABCD”);&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;String
+str2= &lt;/code&gt;&lt;code class=&quot;java keyword&quot;&gt;new&lt;/code&gt; &lt;code
+class=&quot;java plain&quot;&gt;String(“ABCD”);&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;if&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;(Str1 == str2)&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number7 index6 alt2&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;System.out.println(&lt;/code&gt;&lt;code
+class=&quot;java string&quot;&gt;&quot;String 1 == String 2 is true&quot;&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number8 index7 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number9 index8 alt2&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;else&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number10 index9 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number11 index10 alt2&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;System.out.println(&lt;/code&gt;&lt;code
+class=&quot;java string&quot;&gt;&quot;String 1 == String 2 is false&quot;&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number12 index11 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;String
+Str3 = Str2;&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number13 index12 alt2&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;if&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;( Str2 == Str3)&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number14 index13 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number15 index14 alt2&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;System.out.println(&lt;/code&gt;&lt;code
+class=&quot;java string&quot;&gt;&quot;String 2 == String 3 is true&quot;&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number16 index15 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number17 index16 alt2&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;else&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number18 index17 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number19 index18 alt2&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;System.out.println(&lt;/code&gt;&lt;code
+class=&quot;java string&quot;&gt;&quot;String 2 == String 3 is false&quot;&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number20 index19 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number21 index20 alt2&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;if&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;(Str1.equals(str2))&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number22 index21 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number23 index22 alt2&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;System.out.println(&lt;/code&gt;&lt;code
+class=&quot;java string&quot;&gt;&quot;String 1 equals string 2 is true&quot;&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number24 index23 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number25 index24 alt2&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;else&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number26 index25 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number27 index26 alt2&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;System.out.prinltn(&lt;/code&gt;&lt;code
+class=&quot;java string&quot;&gt;&quot;String 1 equals string 2 is false&quot;&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number28 index27 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&quot;line number29 index28 alt2&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}}&lt;br&gt;
+&lt;br&gt;
+&lt;/code&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q10. What are the differences between Heap and Stack Memory?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 16px;&quot;&gt;Q10.&amp;nbsp;What
+are the differences between Heap and Stack Memory?&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-weight: 400;
+font-family: verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;The
+major difference between Heap and Stack memory are:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;OOPs&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 style=&quot;font-family: verdana; font-size: 16px; text-align:
+center; font-weight: bold;&quot;&gt;Stack vs Heap&lt;/h2&gt;
+&lt;table style=&quot;width: 100%;&quot; border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 34px;&quot;&gt;
+&lt;th style=&quot;width: 145px; height: 34px; text-align: center;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Features&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;th style=&quot;width: 676px; text-align: center; height: 34px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Stack&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;th style=&quot;width: 771px; text-align: center; height: 34px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;strong&gt;Heap&lt;/strong&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48px;&quot;&gt;
+&lt;th style=&quot;width: 145px; text-align: center; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Memory&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;td style=&quot;padding-left: 4px; width: 676px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;Stack memory is used only by one thread
+of execution.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 771px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;Heap memory is used by all the parts of
+the application.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48px;&quot;&gt;
+&lt;th style=&quot;width: 145px; text-align: center; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Access&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;td style=&quot;padding-left: 4px; width: 676px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;&quot;&gt;&lt;span
+style=&quot;font-size: 14px;&quot;&gt;Stack memory can’t be accessed
+by other threads.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 771px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;Objects&lt;/span&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 14px;&quot;&gt; stored in
+the heap are globally accessible.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 54px;&quot;&gt;
+&lt;th style=&quot;width: 145px; text-align: center; height: 54px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Memory Management&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;td style=&quot;padding-left: 4px; width: 676px; height: 54px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;Follows LIFO manner to free memory.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 771px; height: 54px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;Memory management is based on generation
+associated to each object.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 61.0156px;&quot;&gt;
+&lt;th style=&quot;width: 145px; text-align: center; height:
+61.0156px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&lt;b&gt;Lifetime&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;td style=&quot;padding-left: 4px; width: 676px; height:
+61.0156px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Exists until the end of
+execution of the thread.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 771px; height:
+61.0156px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Heap memory lives from the
+start till the end of application execution.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 72px;&quot;&gt;
+&lt;th style=&quot;width: 145px; text-align: center; height: 72px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Usage&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;td style=&quot;padding-left: 4px; width: 676px; height: 72px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;Stack memory only contains local
+primitive and reference variables to objects in heap
+space.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 771px; height: 72px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;Whenever an object is created, it’s
+always stored in the Heap space.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q11. What is Polymorphism?</question>
+         <answer>Polymorphism is briefly described as “one interface, many implementations”. 
+Polymorphism is a characteristic of being able to assign a different meaning or usage to something in different contexts – specifically,
+ to allow an entity such as a variable, a function, or an object to have more than one form. 
+There are two types of polymorphism:
+
+   1) Compile time polymorphism
+    2) Run time polymorphism
+
+**Compile time polymorphism** is method overloading whereas **Runtime time polymorphism** is done using inheritance and interface.</answer>
+      </QA>
+      <QA>
+         <question>Q12. What is runtime polymorphism or dynamic method dispatch?</question>
+         <answer>In Java, runtime polymorphism or dynamic method dispatch is a process in which a call to an overridden method is resolved at runtime rather than at compile-time. In this process, an overridden method is called through the reference variable of a superclass. Let’s take a look at the example below to understand it better.
+~~~~
+class Car {
+void run()
+{
+System.out.println(“car is running”); 
+}
+}
+class Audi extends Car {
+void run()
+{
+System.out.prinltn(“Audi is running safely with 100km”);
+}
+public static void main(String args[])
+{
+Car b= new Audi();    //upcasting
+b.run();
+}
+}
+~~~~</answer>
+      </QA>
+      <QA>
+         <question>Q13. What is the difference between abstract classes and interfaces?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2 style=&quot;font-family: verdana; font-size: 16px; text-align:
+center; font-weight: bold;&quot;&gt;Abstract Class vs Interfaces&lt;/h2&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 27px;&quot;&gt;
+&lt;th style=&quot;width: 473.951px; height: 27px; text-align:
+center;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
+sans-serif; font-size: 16px;&quot;&gt;&lt;b&gt;Abstract Class&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;th style=&quot;width: 497.049px; height: 27px; text-align:
+center;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
+sans-serif; font-size: 16px;&quot;&gt;&lt;b&gt;Interfaces&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 34.4531px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 473.951px; height:
+34.4531px;&quot;&gt;&lt;span style=&quot;font-weight: 400; font-family:
+verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;An abstract
+class can provide complete, default code and/or just the
+details that have to be overridden.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 497.049px; height:
+34.4531px;&quot;&gt;&lt;span style=&quot;font-weight: 400; font-family:
+verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;An
+interface cannot provide any code at all,just the
+signature.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 28px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 473.951px; height: 28px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;In case of abstract class, a
+class may extend only one abstract class.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 497.049px; height: 28px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;A Class may implement
+several interfaces.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 30px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 473.951px; height: 30px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;An abstract class can have
+non-abstract methods.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 497.049px; height: 30px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;All methods of an Interface
+are abstract.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 27px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 473.951px; height: 27px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;An abstract class can have
+instance variables.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 497.049px; height: 27px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;An Interface cannot have
+instance variables&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 25px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 473.951px; height: 25px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;An abstract class can have
+any visibility: public, private, protected.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 497.049px; height: 25px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;An Interface visibility must
+be public (or) none.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 30px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 473.951px; height: 30px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;If we add a new method to an
+abstract class then we have the option of providing
+default implementation and therefore all the existing code
+might work properly&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 497.049px; height: 30px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;If we add a new method to an
+Interface then we have to track down all the
+implementations of the interface and define implementation
+for the new method&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 40px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 473.951px; height: 40px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;An abstract class can
+contain constructors&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 497.049px; height: 40px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;An Interface cannot contain
+constructors&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 21px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 473.951px; height: 21px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Abstract classes are fast&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 497.049px; height: 21px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;Interfaces
+are slow as it requires extra indirection to find
+corresponding method in the actual class&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q14. What is method overloading and method overriding?</question>
+         <answer>Method Overloading :
+------------------------
+    1) In Method Overloading, Methods of the same class shares the same name but each method 
+	must have different number of parameters or parameters having different types and order.
+    2) Method Overloading is to “add” or “extend” more to method’s behavior.
+    3) It is a compile time polymorphism.
+    4) The methods must have different signature.
+    5) It may or may not need inheritance in Method Overloading.
+
+Let’s take a look at the example below to understand it better.
+~~~~
+class Adder {
+Static int add(int a, int b)
+{
+return a+b;
+}
+Static double add( double a, double b)
+{
+return a+b;
+}
+public static void main(String args[])
+{
+System.out.println(Adder.add(11,11));
+System.out.println(Adder.add(12.3,12.6));
+}}
+~~~~
+Method Overriding:  
+----------------------
+    * In Method Overriding, sub class have the same method with same name and exactly the same
+       number and type of parameters and same return type as a super class.
+    * Method Overriding is to “Change” existing behavior of method.
+    * It is a run time polymorphism.
+    * The methods must have same signature.
+    * It always requires inheritance in Method Overriding.
+
+Let’s take a look at the example below to understand it better.
+~~~~
+class Car {
+void run(){
+System.out.println(“car is running”); 
+}
+Class Audi extends Car{
+void run()
+{
+System.out.prinltn(“Audi is running safely with 100km”);
+}
+public static void main( String args[])
+{
+Car b=new Audi();
+b.run();
+}
+}
+~~~~</answer>
+      </QA>
+      <QA>
+         <question>Q15. Can you override a private or static method in Java?</question>
+         <answer>You **cannot override a private or static method** in Java.
+ If you create a similar method with same return type and same method arguments in 
+child class then it will hide the super class method; this is known as method hiding. 
+Similarly, you cannot override a private method in sub class because it’s not accessible there. 
+What you can do is create another private method with the same name in the child class. 
+
+Let’s take a look at the example below to understand it better.
+~~~~
+class Base {
+private static void display() {
+System.out.println(&quot;Static or class method from Base&quot;);
+}
+public void print() {
+System.out.println(&quot;Non-static or instance method from Base&quot;);
+}
+class Derived extends Base {
+private static void display() {
+System.out.println(&quot;Static or class method from Derived&quot;);
+}
+public void print() {
+System.out.println(&quot;Non-static or instance method from Derived&quot;);
+}
+public class test {
+public static void main(String args[])
+{
+Base obj= new Derived();
+obj.display();
+obj.print();
+}
+}
+~~~~</answer>
+      </QA>
+      <QA>
+         <question>Q16. What is multiple inheritance? Is it supported by Java?</question>
+         <answer>If a child class inherits the property from multiple classes is known as multiple inheritance. Java does not allow to extend multiple classes.
+
+The problem with multiple inheritance is that if multiple parent classes have a same method name, then at runtime it becomes difficult for the compiler to decide which method to execute from the child class.
+
+Therefore, Java doesn’t support multiple inheritance. The problem is commonly referred as Diamond Problem.</answer>
+      </QA>
+      <QA>
+         <question>Q17. What is association?</question>
+         <answer>Association is a relationship where **all object have their own lifecycle and there is no owner**. 
+Let’s take an example of Teacher and Student. Multiple students can associate with a single teacher and a single student 
+can associate with multiple teachers but there is no ownership between the objects and both have their own lifecycle. 
+These relationship can be one to one, One to many, many to one and many to many.
+Associations can be described as a &quot;has-a&quot; relationship because the typical implementation in Java is through the use of an instance field. 
+The relationship can be bi-directional with each class holding a reference to the other. 
+**Aggregation** and **composition** are types of association relationships.</answer>
+      </QA>
+      <QA>
+         <question>Q18. What do you mean by aggregation?</question>
+         <answer>Aggregation is a specialized form of Association where all object have their own lifecycle but there is **ownership** 
+and child object can not belongs to another parent object.
+Aggregation in Java is a relationship between two classes that is best described as a &quot;has-a&quot; and &quot;whole/part&quot; relationship.
+Let’s take an example of Department and teacher. A single **teacher can not belongs to multiple departments**, 
+but if we delete the department teacher object will not destroy.</answer>
+      </QA>
+      <QA>
+         <question>Q19. What is composition in Java?</question>
+         <answer>Composition is again specialized form of Aggregation and we can call this as a “death” relationship. 
+It is a strong type of Aggregation. **Child object dose not have their lifecycle and if parent object deletes all child object 
+will also be deleted.** 
+Java composition is a design correlation between two classes that is based on the “has-a” and “whole/part” associations and
+owner&apos;s responsibilty of childs lifecycle.
+Let’s take again an example of relationship between House and rooms. House can contain multiple rooms there is no independent life of room and any room can not belongs to two different house if we delete the house room will automatically delete.</answer>
+      </QA>
+      <QA>
+         <question>Q20. What is a servlet?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;ul&gt;
+&lt;li style=&quot;font-weight: 400; text-align: justify;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Java Servlet is server side
+technologies to extend the capability of web servers by
+providing support for dynamic response and data persistence.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;font-weight: 400; text-align: justify;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;The javax.servlet and
+javax.servlet.http packages provide interfaces and classes for
+writing our own servlets.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;font-weight: 400; text-align: justify;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;All servlets must implement the
+javax.servlet.Servlet interface, which defines servlet
+lifecycle methods. When implementing a generic service, we can
+extend the GenericServlet class provided with the Java Servlet
+API. The HttpServlet class provides methods, such as doGet()
+and doPost(), for handling HTTP-specific services.&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;font-weight: 400; text-align: justify;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Most of the times, web
+applications are accessed using HTTP protocol and thats why we
+mostly extend HttpServlet class. Servlet API hierarchy is
+shown in below image.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span itemprop=&quot;upvoteCount&quot; class=&quot;vote-count-post &quot;&gt;&lt;/span&gt;&amp;nbsp;
+&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;votecell&quot;&gt;&lt;br&gt;
+&lt;/td&gt;
+&lt;td class=&quot;answercell&quot;&gt;
+&lt;div class=&quot;post-text&quot; itemprop=&quot;text&quot;&gt;
+&lt;p&gt;&lt;a
+href=&quot;http://docs.oracle.com/javaee/6/api/javax/servlet/Servlet.html&quot;
+rel=&quot;noreferrer&quot;&gt;javax.servlet.Servlet&lt;/a&gt; is
+interface, it defines methods for all the
+implementations - that&apos;s what interfaces usually do.&lt;/p&gt;
+&lt;p&gt;&lt;a
+href=&quot;http://docs.oracle.com/javaee/6/api/javax/servlet/GenericServlet.html&quot;
+rel=&quot;noreferrer&quot;&gt;javax.servlet.GenericServlet&lt;/a&gt; is
+protocol independent. It is abstract, so it is not to be
+directly instantiated. It is usable class to extend if
+you some day have to write servlet for protocol other
+than HTTP.&lt;/p&gt;
+&lt;p&gt;&lt;a
+href=&quot;http://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServlet.html&quot;
+rel=&quot;noreferrer&quot;&gt;javax.servlet.http.HttpServlet&lt;/a&gt; is
+abstract class to be extended if you want to communicate
+over HTTP protocol. Most likely you only have to care
+about this one.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q21. What are the differences between Get and Post methods?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2 style=&quot;font-family: verdana; font-size: 16px; text-align:
+center; font-weight: bold;&quot;&gt;Get vs Post&lt;/h2&gt;
+&lt;table style=&quot;width: 100%;&quot; border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;th style=&quot;width: 371px; text-align: center; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 16px;&quot;&gt;&lt;b&gt;Get&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;th style=&quot;width: 391px; text-align: center; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 16px;&quot;&gt;&lt;b&gt;Post&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 371px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Limited amount of data can
+be sent because data is sent in header.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 391px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Large amount of data can be
+sent because data is sent in body.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 37px;&quot;&gt;
+&lt;td style=&quot;width: 371px; height: 37px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;Not Secured because
+data is exposed in URL bar.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;width: 391px; height: 37px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;Secured because data
+is not exposed in URL bar.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 33px;&quot;&gt;
+&lt;td style=&quot;width: 371px; height: 33px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;Can be bookmarked&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;width: 391px; height: 33px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;Cannot be bookmarked&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 36px;&quot;&gt;
+&lt;td style=&quot;width: 371px; height: 36px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;Idempotent*&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;width: 391px; height: 36px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;Non-Idempotent&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 39.6719px;&quot;&gt;
+&lt;td style=&quot;width: 371px; height: 39.6719px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;It is more efficient
+and used than Post&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;width: 391px; height: 39.6719px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;It is less efficient
+and used&lt;br&gt;
+&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+*&lt;span class=&quot;st&quot; data-hveid=&quot;73&quot;
+data-ved=&quot;0ahUKEwjxioe5rcjXAhXCjZQKHa34DcoQ4EUISTAC&quot;&gt; For an
+operation (or service call) to be &lt;em&gt;idempotent&lt;/em&gt;, clients
+can make that same call repeatedly while producing the same
+result.&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q22. What is Request Dispatcher?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 16px;&quot;&gt;&lt;strong&gt;Q3.&amp;nbsp;What is
+Request Dispatcher?&lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;RequestDispatcher
+interface is used to forward the request to another resource
+that can be HTML, JSP or another servlet in same application. &lt;br&gt;
+We can also use this to include the content of another resource
+to the response.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;There are two methods
+defined in this interface:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;1.void forward()&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;2.void include()&lt;br&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;img
+src=&quot;https://cdn.edureka.co/blog/wp-content/uploads/2017/04/Forward-Method.png&quot;
+alt=&quot;pic&quot; width=&quot;527&quot; height=&quot;200&quot;&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;img
+src=&quot;https://cdn.edureka.co/blog/wp-content/uploads/2017/04/Include-Method.png&quot;
+alt=&quot;pic2&quot; width=&quot;527&quot; height=&quot;200&quot;&gt;&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q23. What are the differences between forward() method and sendRedirect() methods?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 16px;&quot;&gt;What are the
+differences between forward() method and sendRedirect()
+methods?&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;div&gt;
+&lt;h2 style=&quot;font-family: verdana; font-size: 16px; text-align:
+center; font-weight: bold;&quot;&gt;Forward() vs SendRedirect()&lt;/h2&gt;
+&lt;table style=&quot;width: 100%;&quot; border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 24.875px;&quot;&gt;
+&lt;th style=&quot;text-align: center; height: 24.875px; width:
+375px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
+sans-serif; font-size: 16px;&quot;&gt;&lt;b&gt;Forward() method&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;th style=&quot;text-align: center; height: 24.875px; width:
+381px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
+sans-serif; font-size: 16px;&quot;&gt;&lt;b&gt;SendRedirect() method&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 53px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; height: 53px; width: 375px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;forward() sends the same
+request to another resource.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 53px; width: 381px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;sendRedirect() method
+sends new request always because it uses the URL bar of
+the browser.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 35px;&quot;&gt;
+&lt;td style=&quot;height: 35px; width: 375px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;forward() method
+works at server side.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 35px; width: 381px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;sendRedirect()
+method works at client side.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48px;&quot;&gt;
+&lt;td style=&quot;height: 48px; width: 375px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;forward() method
+works within the server only.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 48px; width: 381px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;sendRedirect() method
+works within and outside the server.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q24. What is the life-cycle of a servlet?</question>
+         <answer>What is the life-cycle of a servlet?
+======================
+There are 5 stages in the lifecycle of a servlet:
+
+
+  1. Servlet is loaded
+  2. Servlet is instantiated
+  3. Servlet is initialized
+  4. Service the request
+  5. Servlet is destroyed</answer>
+      </QA>
+      <QA>
+         <question>Q25. How does cookies work in Servlets?</question>
+         <answer>How does cookies work in Servlets?
+========================
+
+  -  Cookies are text data sent by server to the client and it gets saved at the client local machine.
+  -  Servlet API provides cookies support through javax.servlet.http.Cookie class that implements Serializable and Cloneable interfaces.
+  -  HttpServletRequest getCookies() method is provided to get the array of Cookies from request, since there is no point of adding Cookie to request, there are no methods to set or add cookie to request.
+  -  Similarly HttpServletResponse addCookie(Cookie c) method is provided to attach cookie in response header, there are no getter methods for cookie.</answer>
+      </QA>
+      <QA>
+         <question>Q26. What are the differences between ServletContext vs ServletConfig?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-weight: 400;
+font-family: verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;The
+difference between ServletContext and ServletConfig in Servlets
+JSP is in below tabular format.&lt;/span&gt;&lt;/p&gt;
+&lt;h2 style=&quot;font-family: verdana; font-size: 16px; text-align:
+center; font-weight: bold;&quot;&gt;ServletConfig vs ServletContext&lt;/h2&gt;
+&lt;table style=&quot;width: 100%;&quot; border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;th style=&quot;text-align: center; width: 368px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 16px;&quot;&gt;&lt;b&gt;ServletConfig&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;th style=&quot;text-align: center; width: 402px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 16px;&quot;&gt;&lt;b&gt;ServletContext&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 368px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Servlet config object
+represent single servlet&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 402px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;It represent whole web
+application running on particular JVM and common for all
+the servlet&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 56.75px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 368px; height: 56.75px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Its like local parameter
+associated with particular servlet&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 402px; height: 56.75px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Its like global parameter
+associated with whole application&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 58px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 368px; height: 58px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;It’s a name value pair
+defined inside the servlet section of web.xml file so it
+has servlet wide scope&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 402px; height: 58px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;ServletContext has
+application wide scope so define outside of servlet tag in
+web.xml file.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 57px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 368px; height: 57px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;getServletConfig() method is
+used to get the config object&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 402px; height: 57px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;getServletContext() method
+is &amp;nbsp;used to get the context object.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 72px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 368px; height: 72px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;for example shopping cart of
+a user is a specific to particular user so here we can use
+servlet config&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 402px; height: 72px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;To get the MIME type of a
+file or application session related information is stored
+using servlet context object.&lt;br&gt;
+&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;code&gt;public String getServletInfo() {&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; StringBuilder sb = new
+StringBuilder();&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+sb.append(getServletConfig().getServletName()).append(&quot;\n&quot;)&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+.append(getServletConfig().getInitParameter(&quot;ConfigPar&quot;));&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+sb.append(&quot;&amp;lt;h2&amp;gt;Context params&amp;lt;/h2&amp;gt;&quot;)&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+.append(getServletContext().getInitParameter(&quot;CtxPar&quot;));&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return sb.toString();&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br&gt;
+&lt;br&gt;
+&lt;/code&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q27. What are the different methods of session management in servlets?</question>
+         <answer>What are the different methods of session management in servlets?
+------------------------------------------------------------------------
+Session is a conversational state between client and server and it can consists of multiple request and response 
+between client and server. Since HTTP and Web Server both are stateless, the only way to maintain a session
+is when some unique information about the session (session id) is passed between server and client in every request and response.
+
+Some of the common ways of session management in servlets are:
+
+1.    User Authentication
+2.    HTML Hidden Field
+3.    Cookies
+4.   URL Rewriting
+ 5.  Session Management API</answer>
+      </QA>
+      <QA>
+         <question>Q28. What is JDBC Driver?</question>
+         <answer>JDBC Driver is a software component that enables java application to interact with the database. There are 4 types of JDBC drivers:
+
+   - JDBC-ODBC bridge driver
+   - Native-API driver (partially java driver)
+   - Network Protocol driver (fully java driver)
+   - Thin driver (fully java driver)
+
+Pic: ![pic](https://cdn.edureka.co/blog/wp-content/uploads/2017/04/JDBC.png &quot;Pic&quot;)</answer>
+      </QA>
+      <QA>
+         <question>Q29. What are the steps to connect to a database in java?</question>
+         <answer>Steps to connect to a database in java
+-------------------------------
+
+-    Registering the driver class
+ -   Creating connection
+  -  Creating statement
+  -  Executing queries
+  -  Closing connection</answer>
+      </QA>
+      <QA>
+         <question>Q30. What are the JDBC API components?</question>
+         <answer>The java.sql package contains interfaces and classes for JDBC API.
+Interfaces:
+
+    -  Connection
+    -  Statement
+    -  PreparedStatement
+    -  ResultSet
+    -  ResultSetMetaData
+    -  DatabaseMetaData
+    -  CallableStatement etc.
+
+Classes:
+
+    -  DriverManager
+    -  Blob
+    -  Clob
+    -  Types
+    -  SQLException etc.</answer>
+      </QA>
+      <QA>
+         <question>Q31. What is the role of JDBC DriverManager class?</question>
+         <answer>The DriverManager class manages the registered drivers. It can be used to register and unregister drivers. It provides factory method that returns the instance of Connection.</answer>
+      </QA>
+      <QA>
+         <question>Q32. What is JDBC Connection interface?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size:
+16px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva, sans-serif;&quot;&gt;What
+is JDBC Connection interface?&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-weight:
+400;&quot;&gt;The &lt;/span&gt;Connection interface&lt;span
+style=&quot;font-weight: 400;&quot;&gt; maintains a session with the
+database. It can be used for transaction management. It
+provides factory methods that returns the instance of
+Statement, PreparedStatement, CallableStatement and
+DatabaseMetaData.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 16px;&quot;&gt;&lt;strong&gt;&lt;img
+class=&quot;aligncenter wp-image-45590 size-full&quot;
+src=&quot;https://cdn.edureka.co/blog/wp-content/uploads/2017/04/Connection-interface.png&quot;
+alt=&quot;ConnectionInterface - Java Interview Questions -
+Edureka&quot;
+srcset=&quot;https://cdn.edureka.co/blog/wp-content/uploads/2017/04/Connection-interface.png
+2946w,
+https://cdn.edureka.co/blog/wp-content/uploads/2017/04/Connection-interface-150x29.png
+150w,
+https://cdn.edureka.co/blog/wp-content/uploads/2017/04/Connection-interface-300x58.png
+300w,
+https://cdn.edureka.co/blog/wp-content/uploads/2017/04/Connection-interface-768x148.png
+768w,
+https://cdn.edureka.co/blog/wp-content/uploads/2017/04/Connection-interface-528x102.png
+528w,
+https://cdn.edureka.co/blog/wp-content/uploads/2017/04/Connection-interface-590x114.png
+590w&quot; sizes=&quot;(max-width: 2946px) 100vw, 2946px&quot; width=&quot;778&quot;
+height=&quot;150&quot;&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+   </qaList>
+</KNBase>
