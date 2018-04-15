@@ -1,8 +1,13 @@
 package org.rb.qaandro;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.text.Html;
+import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,8 +65,35 @@ public class AFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_a, container, false);
         webview = view.findViewById(R.id.aFrgWebView);
-       
+        FloatingActionButton fab =  view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Share", Snackbar.LENGTH_LONG)
+                        .setAction("Action", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                shareAnswer();
+                            }
+                        }).show();
+            }
+        });
         return view;
+    }
+
+    private void shareAnswer(){
+        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+
+        sharingIntent.setType("text/html");
+
+        Spanned htmlTxt= Html.fromHtml(mHtmlStr);
+        sharingIntent.putExtra(
+                android.content.Intent.EXTRA_TEXT, 
+                //Html.fromHtml("<p>This is the text shared.</p>")
+                htmlTxt
+        );
+
+        startActivity(Intent.createChooser(sharingIntent, "Share using"));
     }
 
     @Override

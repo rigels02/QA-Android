@@ -29,6 +29,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
+    //public static boolean dataOnDiskUpdated;
 
 
     @Override
@@ -45,14 +46,7 @@ public class MainActivity extends AppCompatActivity {
             showFragment(new QFragment());
         }
 
-        FloatingActionButton fab =  findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
     }
 
     public InputStream getInputStream()  {
@@ -62,20 +56,23 @@ public class MainActivity extends AppCompatActivity {
         try{
             //If private local file is available use it.
             istream = openFileInput(InitKNBase.knbXML);
+            Log.d("Use file","Private local file "+InitKNBase.knbXML);
             return istream;
         }catch(FileNotFoundException ex){
-            Log.i("Info",InitKNBase.knbXML+" file not found");
+            Log.i("Info",InitKNBase.knbXML+" local private file not found");
             //continue from assets...
         }
         try {
             //use file from resource folder 'assets'
+            /***
             String[] slist = assetsManager.list(""); //("assets");
             for (String el: slist ) {
                 System.out.println("Asset--->:"+el);
             }
+             ***/
             InputStream assetsInputStream = assetsManager.open(InitKNBase.knbXML);
             istream = assetsInputStream;
-            Log.d("Assets:",assetsInputStream.toString());
+            Log.d("Use Assets:",assetsInputStream.toString());
 
         } catch (IOException e) {
             Log.d("Assets:",e.getMessage());
@@ -113,6 +110,11 @@ public class MainActivity extends AppCompatActivity {
         if(id == R.id.dlg_activity){
             Intent it = new Intent(this, FileDlgActivity.class);
             startActivity(it);
+            return true;
+        }
+        if(id == R.id.rest_client){
+            Intent restFulClient = new Intent(this, RestfulClientActivity.class);
+            startActivity(restFulClient);
             return true;
         }
         /***
@@ -189,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+
         super.onBackPressed();
 
         /*

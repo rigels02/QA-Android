@@ -20,6 +20,7 @@ import org.rb.qa.storage.android.InitKNBase;
 import org.rb.qaandro.qfragment.QItem;
 import org.rb.qaandro.qfragment.QItemAdapter;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +31,9 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class QFragment extends Fragment {
+
+    public static boolean dataOnDiskUpdated = false;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -78,6 +82,8 @@ public class QFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_q, container, false);
         mlv = view.findViewById(R.id.qFrgListView);
@@ -95,7 +101,8 @@ public class QFragment extends Fragment {
         return new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getActivity(),"Selected: "+adapterView.getAdapter().getItem(i),Toast.LENGTH_SHORT).show();
+                String question = ((QItemAdapter) adapterView.getAdapter()).getItem(i).qtext;
+                Toast.makeText(getActivity(),"Selected: "+ question,Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity())
                         .showFragment(
                                 AFragment.newInstance(
@@ -108,6 +115,13 @@ public class QFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
+        if(dataOnDiskUpdated){
+            dataOnDiskUpdated= false;
+            //data has been changed on disk / file, force to reload data from file
+            //Resume by returning from other activity what changed data, for ex. RestfulClientActivity
+            resetQAGenerator();
+        }
         try {
             updateListView();
         } catch (Exception e) {
@@ -132,13 +146,28 @@ public class QFragment extends Fragment {
         return qitems;
     }
 
+    /**
+     * To force updateListView() reload data from file reset QAGenerator
+     */
+    public void resetQAGenerator() {
+        this.qaGenerator = null;
+    }
+
     private void updateListView() throws Exception {
         QItemAdapter adapter = (QItemAdapter) mlv.getAdapter();
         if(qaGenerator == null) {
             MainActivity mainActivity = (MainActivity) getActivity();
-            KNBase knBase = InitKNBase.go(
-                    StorageFactories.take().getFactory(),
-                    mainActivity.getInputStream());
+            KNBase knBase = null;
+            InputStream is;
+            if((is=mainActivity.getInputStream()) != null) {
+                knBase = InitKNBase.go(
+                        StorageFactories.take().getFactory(),
+                        is
+                );
+                is.close();
+            }else {
+                knBase = new KNBase();
+            }
             qaGenerator = new QAGenerator(knBase);
         }
             adapter.clear();

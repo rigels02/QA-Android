@@ -10,5 +10,9 @@
           android:title="Dialog Activity"
           android:orderInCategory="100"
           app:showAsAction="never"/>
+    <item android:id="@+id/rest_client"
+          android:title="Receive Data"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
 
 </menu>

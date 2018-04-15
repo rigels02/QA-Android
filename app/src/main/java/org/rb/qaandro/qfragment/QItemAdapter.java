@@ -36,8 +36,8 @@ public class QItemAdapter extends ArrayAdapter<QItem> {
             row = inflater.inflate(layoutId, parent, false);
 
             holder = new QItemHolder();
-            holder.imgIcon = (ImageView)row.findViewById(R.id.imgIcon);
-            holder.qtxt = (TextView)row.findViewById(R.id.txtQText);
+            holder.imgIcon = row.findViewById(R.id.imgIcon);
+            holder.qtxt = row.findViewById(R.id.txtQText);
 
             row.setTag(holder);
         }else {
