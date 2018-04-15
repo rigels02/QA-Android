@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
-public interface IKNBaseService {
+interface IKNBaseService {
     @GET("id")
     Call<String> getIT();
 

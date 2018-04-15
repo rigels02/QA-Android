@@ -3,8 +3,6 @@ package org.rb.qaandro;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -12,13 +10,12 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import org.rb.qa.storage.IStorageFactory;
 import org.rb.qa.storage.StorageFactories;
 import org.rb.qa.storage.StorageType;
 import org.rb.qa.storage.android.InitKNBase;
-import org.rb.qaandro.storage.simple.SimpleFactory;
 import org.rb.qaandro.filesdlg.FileDlgActivity;
+import org.rb.qaandro.storage.simple.SimpleFactory;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -184,10 +181,10 @@ public class MainActivity extends AppCompatActivity {
 
     protected Fragment getCurrentFragment(){
         //FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        Fragment currentFrag = getSupportFragmentManager()
+
+        return getSupportFragmentManager()
                 .findFragmentById(R.id.fragment);
-        return currentFrag;
-    }
+        }
 
     @Override
     public void onBackPressed() {
@@ -210,6 +207,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /****
     @Override
     protected void onResume() {
         super.onResume();
@@ -222,6 +220,6 @@ public class MainActivity extends AppCompatActivity {
         // Save fields instances if any in outState for next Resume
 
     }
-
+    *****/
 
 }

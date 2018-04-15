@@ -10,7 +10,7 @@ public class Dialogs {
     private Dialogs() {
     }
 
-    public static enum InfoType{
+    public enum InfoType{
         Info,
         Error
     }
