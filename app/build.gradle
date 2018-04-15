@@ -28,6 +28,7 @@ dependencies {
     //implementation  group: 'org.rb.mm', name: 'Interfaces', version: '1.0-SNAPSHOT'
     /** */
     implementation 'com.atlassian.commonmark:commonmark:0.10.0'
+    //implementation 'ru.noties:markwon:1.0.4'
     implementation('org.simpleframework:simple-xml:2.7.1') {
         exclude group: 'xpp3', module: 'xpp3' //comflict with android xpp3 impl
         exclude group: 'stax', module: 'stax-api' //conflict with android

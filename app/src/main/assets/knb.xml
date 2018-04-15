@@ -1,4 +1,5 @@
 <KNBase>
+   <modifyTime>2018-04-15 13:27:17.236 EEST</modifyTime>
    <qaList class="java.util.ArrayList">
       <QA>
          <question>Q1. Explain JVM, JRE and JDK?</question>
@@ -199,7 +200,7 @@ geneva, sans-serif; font-size: 14px;&quot;&gt;Equals()&amp;nbsp;method is
 defined in Object class in Java and used for checking equality
 of two objects defined by business logic.&lt;br&gt;
 &lt;/span&gt;&lt;span style=&quot;font-family: verdana, geneva, sans-serif;
-font-size: 14px;&quot;&gt;“==” or equality operator in Java is a binary
+font-size: 14px;&quot;&gt;&quot;==&quot; or equality operator in Java is a binary
 operator provided by Java programming language and used to
 compare primitives and objects.&amp;nbsp;&lt;/span&gt;&lt;span
 style=&quot;font-family: verdana, geneva, sans-serif; font-size:
@@ -220,10 +221,10 @@ keyword&quot;&gt;void&lt;/code&gt; &lt;code class=&quot;java plain&quot;&gt;main
 args) {&lt;/code&gt;&lt;/div&gt;
 &lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;String
 str1= &lt;/code&gt;&lt;code class=&quot;java keyword&quot;&gt;new&lt;/code&gt; &lt;code
-class=&quot;java plain&quot;&gt;String(“ABCD”);&lt;/code&gt;&lt;/div&gt;
+class=&quot;java plain&quot;&gt;String(&quot;ABCD&quot;);&lt;/code&gt;&lt;/div&gt;
 &lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;String
 str2= &lt;/code&gt;&lt;code class=&quot;java keyword&quot;&gt;new&lt;/code&gt; &lt;code
-class=&quot;java plain&quot;&gt;String(“ABCD”);&lt;/code&gt;&lt;/div&gt;
+class=&quot;java plain&quot;&gt;String(&quot;ABCD&quot;);&lt;/code&gt;&lt;/div&gt;
 &lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;if&lt;/code&gt;&lt;code
 class=&quot;java plain&quot;&gt;(Str1 == str2)&lt;/code&gt;&lt;/div&gt;
 &lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/div&gt;
@@ -375,8 +376,8 @@ always stored in the Heap space.&lt;/span&gt;&lt;/td&gt;
       </QA>
       <QA>
          <question>Q11. What is Polymorphism?</question>
-         <answer>Polymorphism is briefly described as “one interface, many implementations”. 
-Polymorphism is a characteristic of being able to assign a different meaning or usage to something in different contexts – specifically,
+         <answer>Polymorphism is briefly described as &quot;one interface, many implementations&quot;. 
+Polymorphism is a characteristic of being able to assign a different meaning or usage to something in different contexts - specifically,
  to allow an entity such as a variable, a function, or an object to have more than one form. 
 There are two types of polymorphism:
 
@@ -387,18 +388,18 @@ There are two types of polymorphism:
       </QA>
       <QA>
          <question>Q12. What is runtime polymorphism or dynamic method dispatch?</question>
-         <answer>In Java, runtime polymorphism or dynamic method dispatch is a process in which a call to an overridden method is resolved at runtime rather than at compile-time. In this process, an overridden method is called through the reference variable of a superclass. Let’s take a look at the example below to understand it better.
+         <answer>In Java, runtime polymorphism or dynamic method dispatch is a process in which a call to an overridden method is resolved at runtime rather than at compile-time. In this process, an overridden method is called through the reference variable of a superclass. Let&apos;s take a look at the example below to understand it better.
 ~~~~
 class Car {
 void run()
 {
-System.out.println(“car is running”); 
+System.out.println(&quot;car is running&quot;); 
 }
 }
 class Audi extends Car {
 void run()
 {
-System.out.prinltn(“Audi is running safely with 100km”);
+System.out.prinltn(&quot;Audi is running safely with 100km&quot;);
 }
 public static void main(String args[])
 {
@@ -526,12 +527,12 @@ corresponding method in the actual class&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
 ------------------------
     1) In Method Overloading, Methods of the same class shares the same name but each method 
 	must have different number of parameters or parameters having different types and order.
-    2) Method Overloading is to “add” or “extend” more to method’s behavior.
+    2) Method Overloading is to &quot;add&quot; or &quot;extend&quot; more to method’s behavior.
     3) It is a compile time polymorphism.
     4) The methods must have different signature.
     5) It may or may not need inheritance in Method Overloading.
 
-Let’s take a look at the example below to understand it better.
+Let&apos;s take a look at the example below to understand it better.
 ~~~~
 class Adder {
 Static int add(int a, int b)
@@ -552,7 +553,7 @@ Method Overriding:
 ----------------------
     * In Method Overriding, sub class have the same method with same name and exactly the same
        number and type of parameters and same return type as a super class.
-    * Method Overriding is to “Change” existing behavior of method.
+    * Method Overriding is to &quot;Change&quot; existing behavior of method.
     * It is a run time polymorphism.
     * The methods must have same signature.
     * It always requires inheritance in Method Overriding.
@@ -561,12 +562,12 @@ Let’s take a look at the example below to understand it better.
 ~~~~
 class Car {
 void run(){
-System.out.println(“car is running”); 
+System.out.println(&quot;car is running&quot;); 
 }
 Class Audi extends Car{
 void run()
 {
-System.out.prinltn(“Audi is running safely with 100km”);
+System.out.prinltn(&quot;Audi is running safely with 100km&quot;);
 }
 public static void main( String args[])
 {
@@ -581,10 +582,11 @@ b.run();
          <answer>You **cannot override a private or static method** in Java.
  If you create a similar method with same return type and same method arguments in 
 child class then it will hide the super class method; this is known as method hiding. 
-Similarly, you cannot override a private method in sub class because it’s not accessible there. 
+Similarly, you cannot override a private method in sub class because it&apos;s not accessible there. 
 What you can do is create another private method with the same name in the child class. 
 
 Let’s take a look at the example below to understand it better.
+
 ~~~~
 class Base {
 private static void display() {
@@ -621,7 +623,7 @@ Therefore, Java doesn’t support multiple inheritance. The problem is commonly 
       <QA>
          <question>Q17. What is association?</question>
          <answer>Association is a relationship where **all object have their own lifecycle and there is no owner**. 
-Let’s take an example of Teacher and Student. Multiple students can associate with a single teacher and a single student 
+Let&apos;s take an example of Teacher and Student. Multiple students can associate with a single teacher and a single student 
 can associate with multiple teachers but there is no ownership between the objects and both have their own lifecycle. 
 These relationship can be one to one, One to many, many to one and many to many.
 Associations can be described as a &quot;has-a&quot; relationship because the typical implementation in Java is through the use of an instance field. 
@@ -638,12 +640,12 @@ but if we delete the department teacher object will not destroy.</answer>
       </QA>
       <QA>
          <question>Q19. What is composition in Java?</question>
-         <answer>Composition is again specialized form of Aggregation and we can call this as a “death” relationship. 
+         <answer>Composition is again specialized form of Aggregation and we can call this as a &quot;death&quot; relationship. 
 It is a strong type of Aggregation. **Child object dose not have their lifecycle and if parent object deletes all child object 
 will also be deleted.** 
-Java composition is a design correlation between two classes that is based on the “has-a” and “whole/part” associations and
+Java composition is a design correlation between two classes that is based on the &quot;has-a&quot; and &quot;whole/part&quot; associations and
 owner&apos;s responsibilty of childs lifecycle.
-Let’s take again an example of relationship between House and rooms. House can contain multiple rooms there is no independent life of room and any room can not belongs to two different house if we delete the house room will automatically delete.</answer>
+Let&apos;s take again an example of relationship between House and rooms. House can contain multiple rooms there is no independent life of room and any room can not belongs to two different house if we delete the house room will automatically delete.</answer>
       </QA>
       <QA>
          <question>Q20. What is a servlet?</question>
@@ -1062,7 +1064,7 @@ Pic: ![pic](https://cdn.edureka.co/blog/wp-content/uploads/2017/04/JDBC.png &quo
          <answer>The java.sql package contains interfaces and classes for JDBC API.
 Interfaces:
 
-    -  Connection
+    - Connection
     -  Statement
     -  PreparedStatement
     -  ResultSet
