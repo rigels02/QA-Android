@@ -47,7 +47,6 @@ Android application.
 The following modules (jar libs) should be included as dependencies in app module build.gradle file:
   
 ~~~~
-implementation 'com.atlassian.commonmark:commonmark:0.10.0'
     implementation('org.simpleframework:simple-xml:2.7.1') {
         exclude group: 'xpp3', module: 'xpp3' //comflict with android xpp3 impl
         exclude group: 'stax', module: 'stax-api' //conflict with android
@@ -57,5 +56,16 @@ implementation 'com.atlassian.commonmark:commonmark:0.10.0'
    
 ~~~~  
 
-## Restful client as Retrofit
- To be added...
+
+
+## Retrofit as Restful client
+
+
+A type-safe HTTP client for Android and Java.
+
+The following dependencies are added into app module build.gradle file:
+
+~~~~
+implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.3.0'
+implementation group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.3.0'
+~~~~

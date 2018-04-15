@@ -34,6 +34,7 @@ public class QFragment extends Fragment {
 
     public static boolean dataOnDiskUpdated = false;
 
+    //TODO: Add some words in Readme.md about retrofit and make code cleaning...
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
