@@ -105,8 +105,8 @@ public class AFragment extends Fragment {
          * encoding: "UTF-8"
          * reference: https://stackoverflow.com/questions/3312643/android-webview-utf-8-not-showing/3313266
          */
-       // webview.loadData(mHtmlStr,"text/html; charset=utf-8","UTF-8");
-        // Strange, the below method is rendering properly html <pre> tags
-        webview.loadDataWithBaseURL(null,mHtmlStr,"text/html; charset=utf-8","UTF-8",null);
+       //webview.loadData(mHtmlStr,"text/html; charset=utf-8","UTF-8");
+        // Strange, the below method is rendering properly html <pre> tags, but not above
+       webview.loadDataWithBaseURL(null,mHtmlStr,"text/html","UTF-8",null);
     }
 }

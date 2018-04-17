@@ -21,6 +21,11 @@
                 android:hint="@string/http_localhost_9998"
                 android:text="@string/http_localhost_9998_knbase"/>
         <Button
+                android:text="@string/modify_time_compare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCompare"/>
+        <Button
                 android:text="@string/get"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

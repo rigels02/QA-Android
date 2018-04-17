@@ -25,4 +25,16 @@ public class KNBaseServiceIT {
         assertTrue(knb!= null);
         assertTrue(knb.getQaList().size()>0);
     }
+
+    @Test
+    public void test_compareDates(){
+        System.out.println("************* test_compareDates");
+        KNBaseService service = new KNBaseService("http://localhost:9998/knbase/", null);
+        try {
+            service.compareDates();
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+            fail(ex.getMessage());
+        }
+    }
 }

@@ -31,6 +31,7 @@ public class RestfulClientActivity extends AppCompatActivity {
     private boolean receiving;
 
     private TextView tvReport;
+    private Button btnCompare;
     private Button btnGet;
     private ProgressBar progressBar;
     private EditText edUrl;
@@ -61,9 +62,18 @@ public class RestfulClientActivity extends AppCompatActivity {
 
             }
         });
+        btnCompare = findViewById(R.id.btnCompare);
+        btnCompare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                compareDates();
+            }
+        });
 
         setTitle(R.string.get_remote_data);
     }
+
+
 
     private void getSavedUrl() {
         SharedPreferences properties = getPreferences(Context.MODE_PRIVATE);
@@ -80,19 +90,69 @@ public class RestfulClientActivity extends AppCompatActivity {
         editor.commit();
     }
 
-
-    private void receiveData() {
+    private boolean preTask(){
 
         if(edUrl.getText().toString().isEmpty()){
             infoDlg(this,Dialogs.InfoType.Error,"Url must not be empty");
-            return;
+            return false;
         }
         tvReport.setText("");
         receiving = true;
-        btnGet.setEnabled(false);
         progressBar.setVisibility(View.VISIBLE);
         saveUrl();
+        btnGet.setEnabled(false);
+        btnCompare.setEnabled(false);
+        return true;
+    }
+
+    private void postTask(){
+        btnGet.setEnabled(true);
+        btnCompare.setEnabled(true);
+        progressBar.setVisibility(View.INVISIBLE);
+        receiving=false;
+
+    }
+
+    private void compareDates() {
+        if( !preTask() ) return;
+        new RestfulClientCompareDateTask().execute(edUrl.getText().toString());
+    }
+
+    private void receiveData() {
+
+        if( !preTask() ) return;
+
        new RestfulClientTask().execute(edUrl.getText().toString());
+    }
+
+    private class RestfulClientCompareDateTask extends AsyncTask<String,String,Void> implements INotifier
+    {
+
+
+        @Override
+        protected Void doInBackground(String... url) {
+            try {
+                new KNBaseService(url[0],this).compareDates();
+            } catch (Exception e) {
+               message(e.getMessage());
+            }
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... msg) {
+            tvReport.append(msg[0]+"\n");
+        }
+
+        @Override
+        protected void onPostExecute(Void d) {
+            postTask();
+        }
+
+        @Override
+        public void message(String msg) {
+                publishProgress(msg);
+        }
     }
 
     private class RestfulClientTask extends AsyncTask<String, String,KNBase> implements INotifier {
@@ -120,9 +180,7 @@ public class RestfulClientActivity extends AppCompatActivity {
        
         @Override
         protected void onPostExecute(KNBase knBase) {
-            btnGet.setEnabled(true);
-            progressBar.setVisibility(View.INVISIBLE);
-            receiving=false;
+            postTask();
             if(knBase==null){
                 message("Nothing received to be saved...");
                 return;
