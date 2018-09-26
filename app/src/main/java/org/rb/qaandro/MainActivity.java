@@ -1,21 +1,26 @@
 package org.rb.qaandro;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+import knbinit.KNBSelector;
 import org.rb.qa.storage.IStorageFactory;
 import org.rb.qa.storage.StorageFactories;
 import org.rb.qa.storage.StorageType;
-import org.rb.qa.storage.android.InitKNBase;
 import org.rb.qaandro.filesdlg.FileDlgActivity;
 import org.rb.qaandro.storage.simple.SimpleFactory;
+import org.rb.qaandro.tools.Dialogs;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -49,14 +54,17 @@ public class MainActivity extends AppCompatActivity {
     public InputStream getInputStream()  {
         AssetManager assetsManager = getResources().getAssets();
         InputStream istream=null;
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String knbFile = new KNBSelector(sharedPreferences).getSelectedFile();
 
         try{
             //If private local file is available use it.
-            istream = openFileInput(InitKNBase.knbXML);
-            Log.d("Use file","Private local file "+InitKNBase.knbXML);
+            istream = openFileInput(knbFile);
+            Log.d("Use file","Private local file "+knbFile);
+            Toast.makeText(this,"KNB from private local file",Toast.LENGTH_LONG).show();
             return istream;
         }catch(FileNotFoundException ex){
-            Log.i("Info",InitKNBase.knbXML+" local private file not found");
+            Log.i("Info",knbFile+" local private file not found");
             //continue from assets...
         }
         try {
@@ -67,9 +75,10 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("Asset--->:"+el);
             }
              ***/
-            InputStream assetsInputStream = assetsManager.open(InitKNBase.knbXML);
+            InputStream assetsInputStream = assetsManager.open(knbFile);
             istream = assetsInputStream;
             Log.d("Use Assets:",assetsInputStream.toString());
+            Toast.makeText(this,"KNB Asset file",Toast.LENGTH_LONG).show();
 
         } catch (IOException e) {
             Log.d("Assets:",e.getMessage());
@@ -108,6 +117,30 @@ public class MainActivity extends AppCompatActivity {
         if(id == R.id.rest_client){
             Intent restFulClient = new Intent(this, RestfulClientActivity.class);
             startActivity(restFulClient);
+            return true;
+        }
+        if(id == R.id.select_knb){
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            final KNBSelector selector = new KNBSelector(sharedPreferences);
+
+            CharSequence[] items = new CharSequence[selector.getFiles().size()];
+            selector.getTitles().toArray(items);
+            int selectedItem = selector.getSelectedKnb();
+            Dialogs.choiceKNBFile(this,
+                    items,
+                    selectedItem,
+                    new Dialogs.IChoiceKNBFile() {
+
+                @Override
+                public void callback(int selectedKnbIdx) {
+                    selector.setSelectedKnb(selectedKnbIdx);
+
+                    QFragment.dataOnDiskUpdated = true;
+                    getCurrentFragment().onResume();
+                }
+
+            });
+
             return true;
         }
         /***

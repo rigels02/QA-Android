@@ -18,18 +18,18 @@ public class KNBaseService {
 
     private static final String ID= "50f0f8f0-53ea-413c-b2a3-f3dc387709c0";
     private static final String INFO ="Info" ;
-    //The filename of data requested from sever side
+    //The filename of data requested from sever side (Default)
     private static final String KNBFILE = "knb.xml";
 
     private final IKNBaseService service;
     private final INotifier notifier;
-
+    private String KnbFileName;
 
     /**
      * init Retrofit service
      * @param url url, ex. http://localhost:9998/knbase/
      */
-    public KNBaseService(final String url, INotifier notifier) {
+    public KNBaseService(final String knbFileName, final String url, final INotifier notifier) {
 
         this.notifier = notifier;
         Gson gson = new GsonBuilder().setLenient()
@@ -42,12 +42,17 @@ public class KNBaseService {
                 .build();
 
         service = retrofit.create(IKNBaseService.class);
-
+        this.KnbFileName = knbFileName;
     }
+
 
     private void notify(String msg){
         if(notifier==null) return;
         notifier.message(msg);
+    }
+
+    public void setKnbFileName(String knbFileName) {
+        KnbFileName = knbFileName;
     }
 
     private void getID() throws Exception {
@@ -68,7 +73,7 @@ public class KNBaseService {
 
     public void compareDates() throws Exception {
         getID();
-        Call<Long> rDateCall = service.getDateTimeLong(KNBFILE);
+        Call<Long> rDateCall = service.getDateTimeLong(this.KnbFileName);
         Response<Long> rDateResponse = rDateCall.execute();
         if( !rDateResponse.isSuccessful() ){
             throw new Exception(rDateResponse.message());
@@ -92,7 +97,7 @@ public class KNBaseService {
         getID();
 
         //ID is OK
-        Call<KNBase> knb_r = service.getKNBase(KNBFILE);
+        Call<KNBase> knb_r = service.getKNBase(this.KnbFileName);
         Response<KNBase> knbResponse = knb_r.execute();
         if( !knbResponse.isSuccessful() )
             throw new Exception(knbResponse.message());

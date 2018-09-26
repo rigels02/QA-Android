@@ -11,5 +11,9 @@
           android:title="Receive Data"
           android:orderInCategory="100"
           app:showAsAction="never"/>
+    <item android:id="@+id/select_knb"
+          android:title="Select KNB"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
 
 </menu>

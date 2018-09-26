@@ -1,0 +1,262 @@
+<KNBase>
+   <modifyTime>2018-09-26 10:34:53.100 EEST</modifyTime>
+   <qaList class="java.util.ArrayList">
+      <QA>
+         <question>Q1.What is C++?</question>
+         <answer>C++ is an object oriented programming language created by Bjarne Stroustrup. It is released in 1985.
+
+ Link [http://recruitmentresult.com/cpp-interview-questions-answers/](http://recruitmentresult.com/cpp-interview-questions-answers/ &quot;c++&quot;)</answer>
+      </QA>
+      <QA>
+         <question>Q2. What are the advantages of C++?</question>
+         <answer>C++ doesn’t only maintains all aspects from C language, it also simplify memory management and add several features like:
+
+  - Includes a new datatype known as a class.
+  - Allows object oriented programming.</answer>
+      </QA>
+      <QA>
+         <question>Q3. What is the difference between C and C++?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;span style=&quot;text-decoration: underline;&quot;&gt;No.&lt;/span&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;br&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;C&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;C++&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1)&lt;/td&gt;
+&lt;td&gt;C follows the procedural style programming.&lt;/td&gt;
+&lt;td&gt;C++ is multi-paradigm. It supports both procedural and
+object oriented.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2)&lt;/td&gt;
+&lt;td&gt;Data is less secured in C.&lt;/td&gt;
+&lt;td&gt;In C++, you can use modifiers for class members to make it
+inaccessible for outside users.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3)&lt;/td&gt;
+&lt;td&gt;C follows the top-down approach.&lt;/td&gt;
+&lt;td&gt;C++ follows the bottom-up approach.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4)&lt;/td&gt;
+&lt;td&gt;C does not support function overloading.&lt;/td&gt;
+&lt;td&gt;C++ supports function overloading.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5)&lt;/td&gt;
+&lt;td&gt;In C, you can’t use functions in structure.&lt;/td&gt;
+&lt;td&gt;In C++, you can use functions in structure.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6)&lt;/td&gt;
+&lt;td&gt;C does not support reference variables.&lt;/td&gt;
+&lt;td&gt;C++ supports reference variables.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6)&lt;/td&gt;
+&lt;td&gt;In C, scanf() and printf() are mainly used for
+input/output.&lt;/td&gt;
+&lt;td&gt;C++ mainly uses stream cin and cout to perform input and
+output operations.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q4. What is the difference between reference and pointer?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;span style=&quot;text-decoration: underline;&quot;&gt;No.&lt;/span&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;br&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;Reference&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;Pointer&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1)&lt;/td&gt;
+&lt;td&gt;References are less powerful than pointers. Once a
+reference is created, it can’t refer to other object later.&lt;/td&gt;
+&lt;td&gt;Pointers provide the powerful facilities than references.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2)&lt;/td&gt;
+&lt;td&gt;References are safer and easier to use than pointers.&lt;/td&gt;
+&lt;td&gt;Pointers are comparatively difficult to use.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q5. What is a class?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p class=&quot;P1&quot;&gt;Class is a user-defined data type. Class defines the
+type definition of category of things. It defines a datatype, but
+it does not define the data it just specifies the structure of
+data. It is a user defined data type, which holds its own data
+members and member functions, which can be accessed and used by
+creating an instance of that class. A class is like a blueprint
+for an object.&lt;/p&gt;
+&lt;p class=&quot;P1&quot;&gt;You can create N number of objects from a class.&lt;/p&gt;
+&lt;!--Next &apos;div&apos; was a &apos;text:p&apos;.--&gt;
+&lt;div class=&quot;Standard&quot;&gt;&lt;!--Next &apos;div&apos; is emulating the top hight of a draw:frame.--&gt;&lt;!--Next &apos;
+div&apos; is a draw:frame.
+--&gt;
+&lt;div style=&quot;height:3.2252in;width:6.9252in; padding:0; float:left;
+position:relative; left:0cm; &quot; class=&quot;fr1&quot; id=&quot;Image1&quot;&gt;&lt;img
+style=&quot;height:8.192cm;width:17.59cm;&quot; alt=&quot;&quot;
+src=&quot;data:image/*;base64,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6ce0ZTyZk69ZQXW8z533M4Ln2r26jldet3PbC2X1mqB0DF6G4Dl+UNc/cIIn96v2/j/92SgrLH6VRW8eQI7H930oiKEh7kaN9UlfanVL2xbcen9qbdQCR2/e376cCvX1a7aNaTrWlzCWvt2pz+fNZXr+dG46d/PQV+rT/H1yen7X+3TqPVRyaryXz/s5wTPIPy/J9UeLfswGVZ6b868ptwMvQfAcP/TrH7j4v1N6+Gk4APdiJSB1anUAcIG3HTzjwtqV+d8yJ98dHux2cqfizkhp161WBwCXeOM7nvHxwvri2j9m/2ollMJrVnu85tEbANfnUTsAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATdxc8w9eKoiiKoijK7ZXf/OY39xU8FUVRFEVRlNsvgqeiKIqiKIrSpAieiqIoiqIoSpPyKoMnAABvk+AJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEATgicAAE0IngAANCF4AgDQhOAJAEADh8P/D21CawiX+V5/AAAAAElFTkSuQmCC&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both; line-height:0; width:0; height:0; margin:0;
+padding:0;&quot;&gt; &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q6. What is an object?</question>
+         <answer>Object is the instance of a class. A class provides a blueprint for objects. So you can create an object from a class. 
+When creating an object we are allocated memory for the given class type.
+The objects of a class are declared with the same sort of declaration that we declare variables of basic types.</answer>
+      </QA>
+      <QA>
+         <question>Q7. What are the C++ access specifiers?</question>
+         <answer>The access specifiers are used to define how to functions and variables can be accessed outside the class.
+
+There are three types of access specifiers:
+- **Private:** Functions and variables declared as private can be accessed only within the same class and they cannot be accessed outside the class they are declared.
+- **Public:** Functions and variables declared under public can be accessed from anywhere.
+- **Protected:** Functions and variables declared as protected cannot be accessed outside the class except a child class. This specifier is generally used in inheritance.</answer>
+      </QA>
+      <QA>
+         <question>Q8. What is Object Oriented Programming (OOP)?</question>
+         <answer>OOP is a methodology or paradigm that provides many concepts. The basic concepts of Object Oriented Programming are given below:
+
+- Classes and Objects: Classes are used to specify the structure of the data. They define datatype. You can create any number of objects from a class. Objects are the instances of classes.
+
+- Encapsulation: Encapsulation is a mechanism which binds the data and associated operations together and thus hide the data from outside world. Encapsulation is also known as data hiding. In C++, It is achieved using the access specifiers i.e. public, private and protected.
+
+- Abstraction: Abstraction is used to hide the internal implementations and show only the necessary details to the outer world. Data abstraction is implemented using interfaces and abstract classes in C++.
+
+Some people confused about Encapsulation and abstraction. But they both are different.
+
+- Inheritance: Inheritance is used to inherit the property of one class into another class. It facilitates you to define one class in term of another class.</answer>
+      </QA>
+      <QA>
+         <question>Q9. What is the difference between array and a list?</question>
+         <answer>## What is the difference between array and a list?
+- Array is a collection of homogeneous elements while list is a collection of heterogeneous elements.
+- Array memory allocation is static and continuous while List memory allocation is dynamic and random.
+ - In Array, users don’t need to keep in track of next memory allocation while In list user has to keep in track of next location where memory is allocated.</answer>
+      </QA>
+      <QA>
+         <question>Q10. What is the difference between new() and malloc()?</question>
+         <answer>## What is the difference between new() and malloc()?
+- new() is a preprocessor while malloc() is a function.
+- There is no need to allocate the memory while using “new” but in malloc() you have to use sizeof().
+-  “new” initializes the new memory to 0 while malloc() gives random value in the newly allotted memory location.</answer>
+      </QA>
+      <QA>
+         <question>Q11. What is the error in the code below and how should it be corrected?</question>
+         <answer>## What is the error in the code below and how should it be corrected?
+~~~~
+my_struct_t *bar;
+
+/* … do stuff, including setting bar to point to a defined my_struct_t object … */
+
+memset(bar, 0, sizeof(bar));
+~~~~
+The last argument to memset should be sizeof(*bar), not sizeof(bar). sizeof(bar) calculates the size of bar (i.e., the pointer itself) rather than the size of the structure pointed to by bar.
+
+The code can therefore be corrected by using sizeof(*bar) as the last argument in the call to memset.
+A sharp candidate might point out that using *bar will cause a dereferencing error if bar has not been assigned. Therefore an even safer solution would be to use sizeof(my_struct_t). ```However, an even sharper candidate must know that in this case using *bar is absolutely safe within the call to sizeof, even if bar has not been initialized yet, since sizeof is a compile time construct.```</answer>
+      </QA>
+      <QA>
+         <question>Q12. What will i and j equal after the code below is executed? Explain your answer.</question>
+         <answer>## What will i and j equal after the code below is executed? Explain your answer.
+~~~
+int i = 5;
+int j = i++;
+~~~
+After the above code executes, i will equal 6, but j will equal 5.
+
+Understanding the reason for this is fundamental to understanding how the unary increment (++) and decrement (–) operators work in C++.
+
+When these operators precede a variable, the value of the variable is modified first and then the modified value is used. For example, if we modified the above code snippet to instead say int j = ++i;, i would be incremented to 6 and then j would be set to that modified value, so both would end up being equal to 6.
+
+However, when these operators follow a variable, the unmodified value of the variable is used and then it is incremented or decremented. That’s why, in the statement int j = i++; in the above code snippet, j is first set to the unmodified value of i(i.e., 5) and then i is incremented to 6.</answer>
+      </QA>
+      <QA>
+         <question>Q13. Assuming buf is a valid pointer, what is the problem in the code below? What would be an alternate way of implementing this that would avoid the problem?</question>
+         <answer>## Assuming buf is a valid pointer, what is the problem in the code below? What would be an alternate way of implementing this that would avoid the problem?
+~~~
+size_t sz = buf-&gt;size();
+while ( –sz &gt;= 0 )
+{
+/* do something */
+}
+~~~
+The problem in the above code is that –sz &gt;= 0 will always be true so you’ll never exit the while loop.
+The reasons that –sz &gt;= 0 will always be true is that the type of sz is size_t. **size_t is really just an alias to one of the fundamental unsigned integer types. Therefore, since sz is unsigned, it can never be less than zero (so the condition can never be true).**
+
+One example of an alternative implementation that would avoid this problem would be to instead use a for loop as follows:
+~~~
+for (size_t i = 0; i &lt; sz; i++)
+{
+/* do something */
+}
+~~~</answer>
+      </QA>
+      <QA>
+         <question>Q14. Implement a template function IsDerivedFrom() that takes class C and class P as template parameters. It should return true when class C is derived from class P and false otherwise.</question>
+         <answer>## Implement a template function IsDerivedFrom() that takes class C and class P as template parameters. It should return true when class C is derived from class P and false otherwise.
+To be...</answer>
+      </QA>
+      <QA>
+         <question>Q15. Explain what is the use of void main () in C++ language?</question>
+         <answer>## Explain what is the use of void main () in C++ language?
+To run the C++ application it involves two steps, the first step is a compilation where conversion of C++ code to object code take place. While second step includes linking, where combining of object code from the programmer and from libraries takes place. This function is operated by main () in C++ language.</answer>
+      </QA>
+      <QA>
+         <question>Q16. Explain what is C++ objects?</question>
+         <answer>## Explain what is C++ objects?
+Class gives blueprints for object, so basically an object is created from a class or in other words an object is an instance of a class. The data and functions are bundled together as a self-contained unit called an object. Here, in the example A and B is the Object.
+For example:
+```
+Class Student
+{
+Public:
+Int rollno;
+String name;
+} A, B;
+```</answer>
+      </QA>
+   </qaList>
+</KNBase>

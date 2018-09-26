@@ -69,3 +69,9 @@ The following dependencies are added into app module build.gradle file:
 implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.3.0'
 implementation group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.3.0'
 ~~~~
+
+## KNB files for Android client
+
+The KNB files for Android client (like knb.xml, knb_cpp.xml, knb_tcpip.xml) are saved 
+by using org.simpleframework:simple-xml framework jar. These files are created by 
+using qa-javaFX-module application (menu 'Export KNBase by SimpleXml').

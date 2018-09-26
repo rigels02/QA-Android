@@ -8,4 +8,5 @@
     <string name="http_localhost_9998_knbase">http://localhost:9998/knbase/</string>
     <string name="get_remote_data">Get remote Data</string>
     <string name="modify_time_compare">Compare Data Modify TimeStamps</string>
+    <string name="select_knb_title">Select KNB file</string>
 </resources>

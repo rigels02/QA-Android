@@ -1,5 +1,5 @@
 <KNBase>
-   <modifyTime>2018-04-16 16:05:47.332 EEST</modifyTime>
+   <modifyTime>2018-09-26 10:33:11.714 EEST</modifyTime>
    <qaList class="java.util.ArrayList">
       <QA>
          <question>Q1. Explain JVM, JRE and JDK?</question>
@@ -841,57 +841,40 @@ alt=&quot;pic2&quot; width=&quot;527&quot; height=&quot;200&quot;&gt;&lt;br&gt;
 &lt;title&gt;&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:
-verdana, geneva, sans-serif; font-size: 16px;&quot;&gt;What are the
-differences between forward() method and sendRedirect()
-methods?&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
-&lt;div&gt;
-&lt;h2 style=&quot;font-family: verdana; font-size: 16px; text-align:
-center; font-weight: bold;&quot;&gt;Forward() vs SendRedirect()&lt;/h2&gt;
-&lt;table style=&quot;width: 100%;&quot; border=&quot;1&quot;&gt;
+&lt;h3 style=&quot;color: rgb(0, 0, 0); font-family: -webkit-standard;
+font-style: normal; font-variant-caps: normal; letter-spacing:
+normal; orphans: auto; text-indent: 0px; text-transform: none;
+white-space: normal; widows: auto; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif; font-size:
+16px;&quot;&gt;What are the differences between forward() method and
+sendRedirect() methods&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;table class=&quot;alt&quot; border=&quot;1&quot;&gt;
 &lt;tbody&gt;
-&lt;tr style=&quot;height: 24.875px;&quot;&gt;
-&lt;th style=&quot;text-align: center; height: 24.875px; width:
-375px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
-sans-serif; font-size: 16px;&quot;&gt;&lt;b&gt;Forward() method&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
-&lt;th style=&quot;text-align: center; height: 24.875px; width:
-381px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
-sans-serif; font-size: 16px;&quot;&gt;&lt;b&gt;SendRedirect() method&lt;/b&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;tr&gt;
+&lt;th&gt;forward() method&lt;/th&gt;
+&lt;th&gt;sendRedirect() method&lt;/th&gt;
 &lt;/tr&gt;
-&lt;tr style=&quot;height: 53px;&quot;&gt;
-&lt;td style=&quot;padding-left: 4px; height: 53px; width: 375px;&quot;&gt;&lt;span
-style=&quot;font-weight: 400; font-family: verdana, geneva,
-sans-serif; font-size: 14px;&quot;&gt;forward() sends the same
-request to another resource.&lt;/span&gt;&lt;/td&gt;
-&lt;td style=&quot;padding-left: 4px; height: 53px; width: 381px;&quot;&gt;&lt;span
-style=&quot;font-weight: 400; font-family: verdana, geneva,
-sans-serif; font-size: 14px;&quot;&gt;sendRedirect() method
-sends new request always because it uses the URL bar of
-the browser.&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;The forward() method works at server side.&lt;/td&gt;
+&lt;td&gt;The sendRedirect() method works at client side.&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr style=&quot;height: 35px;&quot;&gt;
-&lt;td style=&quot;height: 35px; width: 375px;&quot;&gt;&lt;span
-style=&quot;font-weight: 400; font-family: verdana, geneva,
-sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;forward() method
-works at server side.&lt;/span&gt;&lt;/td&gt;
-&lt;td style=&quot;height: 35px; width: 381px;&quot;&gt;&lt;span
-style=&quot;font-weight: 400; font-family: verdana, geneva,
-sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;sendRedirect()
-method works at client side.&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;It sends the same request and response objects to another
+servlet.&lt;/td&gt;
+&lt;td&gt;It always sends a new request.&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr style=&quot;height: 48px;&quot;&gt;
-&lt;td style=&quot;height: 48px; width: 375px;&quot;&gt;&lt;span
-style=&quot;font-weight: 400; font-family: verdana, geneva,
-sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;forward() method
-works within the server only.&lt;/span&gt;&lt;/td&gt;
-&lt;td style=&quot;padding-left: 4px; height: 48px; width: 381px;&quot;&gt;&lt;span
-style=&quot;font-weight: 400; font-family: verdana, geneva,
-sans-serif; font-size: 14px;&quot;&gt;sendRedirect() method
-works within and outside the server.&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;It can work within the server only.&lt;/td&gt;
+&lt;td&gt;It can be used within and outside the server.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Example:
+request.getRequestDispacher(&quot;servlet2&quot;).forward(request,response);&lt;/td&gt;
+&lt;td&gt;Example: response.sendRedirect(&quot;servlet2&quot;);&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</answer>
       </QA>
@@ -1512,6 +1495,958 @@ Some of the Spring annotations that I have used in my project are:
 We can use Spring ORM module to integrate Spring and Hibernate frameworks, if you are using Hibernate 3+ where SessionFactory provides current session, then you should avoid using HibernateTemplate or HibernateDaoSupport classes and better to use DAO pattern with dependency injection for the integration.
 
 Also Spring ORM provides support for using Spring declarative transaction management, so you should utilize that rather than going for hibernate boiler-plate code for transaction management.</answer>
+      </QA>
+      <QA>
+         <question>Q48. What is Hibernate Framework?</question>
+         <answer># What is Hibernate Framework?
+Object-relational mapping or ORM is the programming technique to map application domain model objects to the relational database tables. Hibernate is java based ORM tool that provides framework for mapping application domain objects to the relational database tables and vice versa.
+
+Hibernate provides reference implementation of Java Persistence API, that makes it a great choice as ORM tool with benefits of loose coupling. We can use Hibernate persistence API for CRUD operations. Hibernate framework provide option to map plain old java objects to traditional database tables with the use of JPA annotations as well as XML based configuration.
+
+Similarly hibernate configurations are flexible and can be done from XML configuration file as well as programmatically.</answer>
+      </QA>
+      <QA>
+         <question>Q49. What are the important benefits of using Hibernate Framework?</question>
+         <answer># What are the important benefits of using Hibernate Framework?
+Some of the important benefits of using hibernate framework are:
+
+   1. Hibernate eliminates all the boiler-plate code that comes with JDBC and takes care of managing resources, so we can focus on business logic.
+   2. Hibernate framework provides support for XML as well as JPA annotations, that makes our code implementation independent.
+   3. Hibernate provides a powerful query language (HQL) that is similar to SQL. However, HQL is fully object-oriented and understands concepts like inheritance, polymorphism and association.
+   4. Hibernate is an open source project from Red Hat Community and used worldwide. This makes it a better choice than others because learning curve is small and there are tons of online documentations and help is easily available in forums.
+   5. Hibernate is easy to integrate with other Java EE frameworks, it’s so popular that Spring Framework provides built-in support for integrating hibernate with Spring applications.
+   6. Hibernate supports lazy initialization using proxy objects and perform actual database queries only when it’s required.
+   7. Hibernate cache helps us in getting better performance.
+   8. For database vendor specific feature, hibernate is suitable because we can also execute native sql queries.
+
+Overall hibernate is the best choice in current market for ORM tool, it contains all the features that you will ever need in an ORM tool.</answer>
+      </QA>
+      <QA>
+         <question>Q50. Explain Hibernate architecture?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 16px;&quot;&gt;Explain
+Hibernate architecture?&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;img
+src=&quot;https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/04/Hibernate-Architecture.png&quot;
+alt=&quot;pic.&quot; width=&quot;800&quot; height=&quot;500&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q51. What are the differences between Hibernate get and load methods?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;strong&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;&quot;&gt;What are
+the differences between get and load methods?&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-weight: 400;
+font-family: verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;The
+differences between get() and load() methods are given below.&lt;/span&gt;&lt;/p&gt;
+&lt;table style=&quot;width: 781px;&quot; border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 24.8594px;&quot;&gt;
+&lt;td style=&quot;height: 24.8594px; width: 27px; text-align:
+center;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&lt;b&gt;No.&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center; height: 24.8594px; width:
+351px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&lt;b&gt;get()&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24.8594px; text-align: center; width:
+395px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&lt;b&gt;load()&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48px;&quot;&gt;
+&lt;td style=&quot;height: 48px; width: 27px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;1)&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 48px; width: 351px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&amp;nbsp;Returns
+&lt;/span&gt;null&lt;span style=&quot;font-weight: 400;&quot;&gt; if object is
+not found.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 48px; width: 395px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Throws &lt;/span&gt;ObjectNotFoundException&lt;span
+style=&quot;font-weight: 400;&quot;&gt; if object is not found.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 27px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;2)&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 351px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&amp;nbsp;get()
+method always &lt;/span&gt;hit the database&lt;span
+style=&quot;font-weight: 400;&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 395px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&amp;nbsp;load()
+method &lt;/span&gt;doesn’t hit&lt;span style=&quot;font-weight:
+400;&quot;&gt; the database.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 27px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;3)&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 351px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&amp;nbsp;It
+returns real object &lt;/span&gt;not proxy&lt;span
+style=&quot;font-weight: 400;&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 395px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&amp;nbsp;It
+returns &lt;/span&gt;proxy object.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48px;&quot;&gt;
+&lt;td style=&quot;height: 48px; width: 27px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;4)&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 48px; width: 351px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;It
+should be used if &lt;/span&gt;you are not sure&lt;span
+style=&quot;font-weight: 400;&quot;&gt; about the existence of
+instance.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 48px; width: 395px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;It
+should be used if &lt;/span&gt;you are sure&lt;span
+style=&quot;font-weight: 400;&quot;&gt; that instance exists.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;pre&gt;
+Stock stock = (Stock)session.load(Stock.class, new Integer(2)); //proxy
+//Stock stock = (Stock)session.get(Stock.class, new Integer(100)); //real object, return null if not found
+           StockTransaction stockTransactions = new StockTransaction();
+           //set stockTransactions detail
+           stockTransactions.setStock(stock);        
+           session.save(stockTransactions);
+&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q52. What are the advantages of Hibernate over JDBC?</question>
+         <answer># What are the advantages of Hibernate over JDBC?
+Some of the important advantages of Hibernate framework over JDBC are:
+
+   1. Hibernate removes a lot of boiler-plate code that comes with JDBC API, the code looks more cleaner and readable.
+   2. Hibernate supports inheritance, associations and collections. These features are not present with JDBC API.
+   3. Hibernate implicitly provides transaction management, in fact most of the queries can’t be executed outside transaction. In JDBC API, we need to write code for transaction management using commit and rollback. 
+   4. JDBC API throws SQLException that is a checked exception, so we need to write a lot of try-catch block code. Most of the times it’s redundant in every JDBC call and used for transaction management. Hibernate wraps JDBC exceptions and throw JDBCException or HibernateException un-checked exception, so we don’t need to write code to handle it. Hibernate built-in transaction management removes the usage of try-catch blocks.
+   5. Hibernate Query Language (HQL) is more object oriented and close to java programming language. For JDBC, we need to write native sql queries.
+   6. Hibernate supports caching that is better for performance, JDBC queries are not cached hence performance is low.
+   7. Hibernate provide option through which we can create database tables too, for JDBC tables must exist in the database.
+   8. Hibernate configuration helps us in using JDBC like connection as well as JNDI DataSource for connection pool. This is very important feature in enterprise application and completely missing in JDBC API.
+
+   9. Hibernate supports JPA annotations, so code is independent of implementation and easily replaceable with other ORM tools. JDBC code is very tightly coupled with the application.</answer>
+      </QA>
+      <QA>
+         <question>Q53. What are the life-cycle methods for a jsp?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 16px;&quot;&gt;&lt;strong&gt;What are the
+life-cycle methods for a jsp?&lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;table style=&quot;width: 768px;&quot; border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;text-align: center; width: 371px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Method&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center; width: 390px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 55px;&quot;&gt;
+&lt;td style=&quot;width: 371px; height: 55px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;public void jspInit()&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 390px; height: 55px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;It is invoked only once,
+same as init method of servlet.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 72px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 371px; height: 72px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;public void
+_jspService(ServletRequest request,ServletResponse)throws
+ServletException,IOException&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 390px; height: 72px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;It is invoked at each
+request, same as service() method of servlet.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48.3906px;&quot;&gt;
+&lt;td style=&quot;width: 371px; height: 48.3906px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;public void
+jspDestroy()&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 390px; height:
+48.3906px;&quot;&gt;&lt;span style=&quot;font-weight: 400; font-family:
+verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;It is
+invoked only once, same as destroy() method of servlet.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q54. What are the JSP implicit objects?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 16px;&quot;&gt;What are the
+JSP implicit objects?&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-weight: 400;
+font-family: verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;JSP
+provides 9 implicit objects by default. They are as follows:&lt;/span&gt;&lt;/p&gt;
+&lt;table style=&quot;width: 436px;&quot; border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 187px; text-align: center;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Object&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 239px; text-align: center;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24.2031px;&quot;&gt;
+&lt;td style=&quot;height: 24.2031px; width: 187px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;1) out&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24.2031px; width: 239px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;JspWriter&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 187px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;2) request&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 239px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;HttpServletRequest&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 187px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;3) response&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 239px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;HttpServletResponse&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 187px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;4) config&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 239px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;ServletConfig&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 187px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;5) session&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 239px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;HttpSession&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 187px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;6) application&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 239px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;ServletContext&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 187px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;7) pageContext&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 239px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;PageContext&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 187px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;8) page&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 239px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;Object&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 187px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;9) exception&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 24px; width: 239px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;Throwable&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q55. What are the differences between include directive and include action?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 16px;&quot;&gt;What are the
+differences between include directive and include action?&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;text-align: center; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;include directive&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;include action&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 50px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; height: 50px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;The include directive
+includes the content at page translation time.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 50px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;The include action includes
+the content at request time.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 60px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; height: 60px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;The include directive
+includes the original content of the page so page size
+increases at runtime.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 60px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;The include action doesn’t
+include the original content rather invokes the include()
+method of Vendor provided class.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 34.0156px;&quot;&gt;
+&lt;td style=&quot;height: 34.0156px;&quot;&gt;&lt;span style=&quot;font-weight: 400;
+font-family: verdana, geneva, sans-serif; font-size:
+14px;&quot;&gt;&amp;nbsp;It’s better for static pages.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;height: 34.0156px;&quot;&gt;&lt;span style=&quot;font-weight: 400;
+font-family: verdana, geneva, sans-serif; font-size:
+14px;&quot;&gt;&amp;nbsp;It’s better for dynamic pages.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Examples&lt;/h3&gt;
+&lt;h4&gt;JSP Include Directive&lt;/h4&gt;
+index.jsp
+&lt;pre class=&quot;prettyprint prettyprinted&quot; style=&quot;&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;JSP include Directive example&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;%@&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; include file&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;display.jsp&quot;&lt;/span&gt;&lt;/font&gt;&lt;/b&gt;&lt;span class=&quot;pln&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt; %&amp;gt;&lt;/font&gt;&lt;/b&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;display.jsp&lt;/p&gt;
+&lt;pre class=&quot;prettyprint prettyprinted&quot; style=&quot;&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;This is the content of my file&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/p&amp;gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;h4&gt;SP Include Action tag&lt;/h4&gt;
+&lt;p&gt;index.jsp&lt;/p&gt;
+&lt;pre class=&quot;prettyprint prettyprinted&quot; style=&quot;&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;JSP include Action example&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;font color=&quot;#3333ff&quot;&gt;&lt;b&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;jsp:include&lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;span class=&quot;pln&quot;&gt; &lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;span class=&quot;atn&quot;&gt;page&lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;span class=&quot;atv&quot;&gt;&quot;display.jsp&quot;&lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;span class=&quot;pln&quot;&gt; &lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;span class=&quot;tag&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class=&quot;prettyprint prettyprinted&quot; style=&quot;&quot;&gt;&lt;br&gt;&lt;span class=&quot;tag&quot;&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q56. How to disable caching on back button of the browser?</question>
+         <answer># How to disable caching on back button of the browser?
+~~~~
+&lt;%
+response.setHeader(“Cache-Control”,”no-store”);
+response.setHeader(“Pragma”,”no-cache”);
+response.setHeader (“Expires”, “0”);   //prevents caching at the proxy server
+%&gt;
+~~~~</answer>
+      </QA>
+      <QA>
+         <question>Q57. What are the different tags provided in JSTL?</question>
+         <answer># What are the different tags provided in JSTL?
+There are 5 type of JSTL tags.
+
+   1. core tags
+   2. sql tags
+   3. xml tags
+   4. internationalization tags
+   5. functions tags</answer>
+      </QA>
+      <QA>
+         <question>Q58. How to disable session in JSP?</question>
+         <answer># How to disable session in JSP?
+~~~~
+    &lt;%@ page session=“false” %&gt;   
+~~~~</answer>
+      </QA>
+      <QA>
+         <question>Q59. How to delete a Cookie in a JSP?</question>
+         <answer># How to delete a Cookie in a JSP?
+~~~~
+Cookie mycook = new Cookie(&quot;name1&quot;,&quot;value1&quot;);
+response.addCookie(mycook);
+ ......
+//create cookie with the same name and set MaxAge=0
+Cookie killmycook =new Cookie(&quot;name1&quot;,&quot;&quot;);
+killmycook . setMaxAge ( 0 );
+response.addCookie(killmycook );
+~~~~</answer>
+      </QA>
+      <QA>
+         <question>Q60. Explain the jspDestroy() method.</question>
+         <answer># Explain the jspDestroy() method.
+jspDestry() method is invoked from javax.servlet.jsp.JspPage interface whenever a JSP page is about to be destroyed. 
+Servlets destroy methods can be easily overridden to perform cleanup, like when closing a database connection.</answer>
+      </QA>
+      <QA>
+         <question>Q61. How is JSP better than Servlet technology?</question>
+         <answer># How is JSP better than Servlet technology?
+JSP is a technology on the server’s side to make content generation simple. 
+ **They are document centric, whereas servlets are programs.** 
+A Java server page can contain fragments of Java program, which execute and instantiate Java classes.
+ However, they occur inside HTML template file. It provides the framework for development of a Web Application.</answer>
+      </QA>
+      <QA>
+         <question>Q62. Why should we not configure JSP standard tags in web.xml?</question>
+         <answer># Why should we not configure JSP standard tags in web.xml?
+We don’t need to configure JSP standard tags in web.xml because when container loads the web application and find TLD files, it automatically configures them to be used directly in the application JSP pages. We just need to include it in the JSP page using taglib directive.</answer>
+      </QA>
+      <QA>
+         <question>Q63. What is difference between Error and Exception?</question>
+         <answer># What is difference between Error and Exception?
+An error is an irrecoverable condition occurring at runtime. Such as OutOfMemory error. These JVM errors you can not repair them at runtime.Though error can be caught in catch block but the execution of application will come to a halt and is not recoverable.
+
+While exceptions are conditions that occur because of bad input or human error etc. e.g. FileNotFoundException will be thrown if the specified file does not exist. Or a NullPointerException will take place if you try using a null reference. 
+In most of the cases it is possible to recover from an exception (probably by giving user a feedback for entering proper values etc.</answer>
+      </QA>
+      <QA>
+         <question>Q64. How can you handle Java exceptions?</question>
+         <answer># How can you handle Java exceptions?
+There are five keywords used to handle exceptions in java: 
+
+   1. try
+   2. catch
+   3. finally
+   4. throw
+   5. throws</answer>
+      </QA>
+      <QA>
+         <question>Q65. What are the differences between Checked Exception and Unchecked Exception?</question>
+         <answer># What are the differences between Checked Exception and Unchecked Exception?
+## Checked Exception
+The classes that extend Throwable class except RuntimeException and Error are known as checked exceptions. 
+    **Checked exceptions are checked at compile-time.**
+    Example: IOException, SQLException etc.
+
+## Unchecked Exception
+The classes that extend RuntimeException are known as unchecked exceptions. 
+    **Unchecked exceptions are not checked at compile-time.**
+    Example: ArithmeticException, NullPointerException etc.</answer>
+      </QA>
+      <QA>
+         <question>Q66. What purpose does the keywords final, finally, and finalize fulfill?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;strong&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;&quot;&gt;What
+purpose does the keywords final, finally, and finalize
+fulfill?&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;&lt;strong&gt;Final:&lt;/strong&gt;&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt; Final is used to apply
+restrictions on class, method and variable. Final class can’t be
+inherited, final method can’t&amp;nbsp;be overridden and final
+variable value can’t be changed. Let’s take a&amp;nbsp;look at the
+example below to understand it better.&lt;/span&gt;&lt;/p&gt;
+&lt;div&gt;
+&lt;div id=&quot;highlighter_51653&quot; class=&quot;syntaxhighlighter java&quot;&gt;
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;code&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;class&lt;/code&gt;
+&lt;code class=&quot;java plain&quot;&gt;FinalVarExample {&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;public&lt;/code&gt;
+&lt;code class=&quot;java keyword&quot;&gt;static&lt;/code&gt; &lt;code
+class=&quot;java keyword&quot;&gt;void&lt;/code&gt; &lt;code
+class=&quot;java plain&quot;&gt;main( String args[])&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;final&lt;/code&gt;
+&lt;code class=&quot;java keyword&quot;&gt;int&lt;/code&gt; &lt;code
+class=&quot;java plain&quot;&gt;a=&lt;/code&gt;&lt;code class=&quot;java
+value&quot;&gt;10&lt;/code&gt;&lt;code class=&quot;java plain&quot;&gt;;&amp;nbsp;&amp;nbsp;
+&lt;/code&gt;&lt;code class=&quot;java comments&quot;&gt;// Final
+variable&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;a=&lt;/code&gt;&lt;code
+class=&quot;java value&quot;&gt;50&lt;/code&gt;&lt;code class=&quot;java
+plain&quot;&gt;;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;font
+color=&quot;#cc0000&quot;&gt; &lt;/font&gt;&lt;/code&gt;&lt;font
+color=&quot;#cc0000&quot;&gt;&lt;code class=&quot;java comments&quot;&gt;//Error
+as value can&apos;t be changed&lt;/code&gt;&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4 style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;&lt;strong&gt;Finally &lt;/strong&gt;&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;Finally is used to place
+important code, it will be executed whether exception is handled
+or not. Let’s take a&amp;nbsp;look at the example below to
+understand it better.&lt;/span&gt;&lt;/p&gt;
+&lt;div&gt;
+&lt;div id=&quot;highlighter_767858&quot; class=&quot;syntaxhighlighter java&quot;&gt;
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;code&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;class&lt;/code&gt;
+&lt;code class=&quot;java plain&quot;&gt;FinallyExample {&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;public&lt;/code&gt;
+&lt;code class=&quot;java keyword&quot;&gt;static&lt;/code&gt; &lt;code
+class=&quot;java keyword&quot;&gt;void&lt;/code&gt; &lt;code
+class=&quot;java plain&quot;&gt;main(String args[]){&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;try&lt;/code&gt;
+&lt;code class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;int&lt;/code&gt;
+&lt;code class=&quot;java plain&quot;&gt;x=&lt;/code&gt;&lt;code
+class=&quot;java value&quot;&gt;100&lt;/code&gt;&lt;code class=&quot;java
+plain&quot;&gt;;&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;catch&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;(Exception e) {&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number7 index6 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;System.out.println(e);&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number8 index7 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number9 index8 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;font color=&quot;#cc0000&quot;&gt;&lt;code
+class=&quot;java keyword&quot;&gt;finally&lt;/code&gt; &lt;/font&gt;&lt;code
+class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number10 index9 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;System.out.println(&lt;/code&gt;&lt;code
+class=&quot;java string&quot;&gt;&quot;finally block is
+executing&quot;&lt;/code&gt;&lt;code class=&quot;java plain&quot;&gt;);}&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number11 index10 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}}&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number12 index11 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4 style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;&lt;strong&gt;Finalize &lt;/strong&gt;&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;Finalize is used to
+perform clean up processing just before object is garbage
+collected. Let’s take a&amp;nbsp;look at the example below to
+understand it better.&lt;/span&gt;&lt;/p&gt;
+&lt;div&gt;
+&lt;div id=&quot;highlighter_659949&quot; class=&quot;syntaxhighlighter java&quot;&gt;
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;code&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;class&lt;/code&gt;
+&lt;code class=&quot;java plain&quot;&gt;FinalizeExample {&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;public&lt;/code&gt;
+&lt;code class=&quot;java keyword&quot;&gt;void&lt;/code&gt; &lt;code
+class=&quot;java plain&quot;&gt;&lt;font color=&quot;#cc0000&quot;&gt;finalize&lt;/font&gt;()
+{&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;System.out.println(&lt;/code&gt;&lt;code
+class=&quot;java string&quot;&gt;&quot;Finalize is called&quot;&lt;/code&gt;&lt;code
+class=&quot;java plain&quot;&gt;);&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java keyword&quot;&gt;public&lt;/code&gt;
+&lt;code class=&quot;java keyword&quot;&gt;static&lt;/code&gt; &lt;code
+class=&quot;java keyword&quot;&gt;void&lt;/code&gt; &lt;code
+class=&quot;java plain&quot;&gt;main(String args[])&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;{&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number7 index6 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;FinalizeExample
+f1=&lt;/code&gt;&lt;code class=&quot;java keyword&quot;&gt;new&lt;/code&gt;
+&lt;code class=&quot;java plain&quot;&gt;FinalizeExample();&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number8 index7 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;FinalizeExample
+f2=&lt;/code&gt;&lt;code class=&quot;java keyword&quot;&gt;new&lt;/code&gt;
+&lt;code class=&quot;java plain&quot;&gt;FinalizeExample();&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number9 index8 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;f1=
+NULL;&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number10 index9 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;f2=NULL;&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number11 index10 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;System.gc();&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number12 index11 alt1&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;line number13 index12 alt2&quot;&gt;&lt;b&gt;&lt;font
+color=&quot;#3333ff&quot;&gt;&lt;code class=&quot;java plain&quot;&gt;}&lt;/code&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;&lt;span style=&quot;font-family: verdana, geneva, sans-serif;&quot;&gt;&lt;br&gt;
+&lt;/span&gt;&lt;/h3&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q67. What are the differences between throw and throws?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3&gt;&lt;span style=&quot;font-family: verdana, geneva, sans-serif;&quot;&gt;&lt;strong&gt;&lt;span
+style=&quot;font-size: 16px;&quot;&gt;What are the differences between
+throw and throws? &lt;br&gt;
+&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;table style=&quot;width: 790px;&quot; border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;text-align: center; width: 345px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;throw keyword&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center; width: 439px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;throws keyword&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Throw is used to explicitly
+throw an exception.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 439px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Throws is used to declare an
+exception.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 46.2344px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 345px; height:
+46.2344px;&quot;&gt;&lt;span style=&quot;font-weight: 400; font-family:
+verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;Checked
+exceptions can not be propagated with throw only.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 439px; height:
+46.2344px;&quot;&gt;&lt;span style=&quot;font-weight: 400; font-family:
+verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;Checked
+exception can be propagated with throws.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 345px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Throw is followed by an
+instance.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 439px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Throws is followed by class.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 345px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Throw is used within the
+method.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 439px; height: 24px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Throws is used with the
+method signature.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 48px;&quot;&gt;
+&lt;td style=&quot;padding-left: 4px; width: 345px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;You cannot throw multiple
+exception&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; width: 439px; height: 48px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;You can declare multiple
+exception e.g. public void method()throws
+IOException,SQLException.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q68. What is exception hierarchy in java?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:
+verdana, geneva, sans-serif; font-size: 16px;&quot;&gt;What is
+exception hierarchy in java?&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-weight: 400;
+font-family: verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;The
+hierarchy is as follows:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-weight: 400;
+font-family: verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;Throwable
+
+
+is a parent class of all Exception classes. There are two types
+of Exceptions: Checked exceptions and UncheckedExceptions or
+RunTimeExceptions. Both type of exceptions extends Exception
+class whereas errors are further classified into Virtual Machine
+error and Assertion error.&lt;br&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-weight: 400;
+font-family: verdana, geneva, sans-serif; font-size: 14px;&quot;&gt;pic.&lt;br&gt;
+&lt;img
+src=&quot;https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/04/Exception-hierarchy.png&quot;
+alt=&quot;pic&quot; width=&quot;600&quot; height=&quot;300&quot;&gt;&lt;br&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q69. How to create a custom Exception?</question>
+         <answer># How to create a custom Exception?
+To create you own exception extend the Exception class or any of its subclasses.
+
+    class New1Exception extends Exception { }     // this will create Checked Exception
+    class NewException extends IOExcpetion { }   // this will create Checked exception
+    class NewException extends NullPonterExcpetion { }  // this will create UnChecked exception</answer>
+      </QA>
+      <QA>
+         <question>Q70. What are the important methods of Java Exception Class?</question>
+         <answer># What are the important methods of Java Exception Class?
+Exception and all of it’s subclasses doesn’t provide any specific methods and all of the methods are defined in the base class Throwable.
+
+   1. **String getMessage()** – This method returns the message String of Throwable and the message can be provided while creating the exception through it’s constructor.
+   2. **String getLocalizedMessage()** – This method is provided so that subclasses can override it to provide locale specific message to the calling program. Throwable class implementation of this method simply use getMessage() method to return the exception message.
+   3. **Synchronized Throwable getCause()** – This method returns the cause of the exception or null id the cause is unknown.
+   4. **String toString()** – This method returns the information about Throwable in String format, the returned String contains the name of Throwable class and localized message.
+   5. **void printStackTrace()** – This method prints the stack trace information to the standard error stream, this method is overloaded and we can pass PrintStream or PrintWriter as argument to write the stack trace information to the file or stream.</answer>
+      </QA>
+      <QA>
+         <question>Q71. What are the differences between processes and threads?</question>
+         <answer>&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size:
+16px;&quot;&gt;&lt;span style=&quot;font-family: verdana, geneva, sans-serif;&quot;&gt;What
+are the differences between processes and threads?&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;table style=&quot;width: 766px;&quot; border=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;height: 24px;&quot;&gt;
+&lt;td style=&quot;height: 24px; width: 132px;&quot;&gt;&lt;br&gt;
+&lt;/td&gt;
+&lt;td style=&quot;height: 24px; text-align: center; width: 280px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Process&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center; height: 24px; width: 354px;&quot;&gt;&lt;span
+style=&quot;font-family: verdana, geneva, sans-serif;
+font-size: 14px;&quot;&gt;&lt;b&gt;Thread&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 42px;&quot;&gt;
+&lt;td style=&quot;height: 42px; width: 132px; text-align: center;&quot;&gt;&lt;strong&gt;&lt;span
+style=&quot;padding-left: 2px; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Definition&lt;/span&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 42px; width: 280px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;An executing instance of a
+program is called a process.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 42px; width: 354px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;A thread is a subset of the
+process.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 6.70313px;&quot;&gt;
+&lt;td style=&quot;height: 6.70313px; width: 132px; text-align:
+center;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;padding-left: 2px;
+font-family: verdana, geneva, sans-serif; font-size:
+14px;&quot;&gt;Communication&lt;/span&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 6.70313px; width:
+280px;&quot;&gt;&lt;span style=&quot;font-weight: 400; font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;Processes must use
+inter-process communication to communicate with sibling
+processes.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 6.70313px; width:
+354px;&quot;&gt;&lt;span style=&quot;font-weight: 400; font-family: verdana,
+geneva, sans-serif; font-size: 14px;&quot;&gt;Threads can directly
+communicate with other threads of its process.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 40px;&quot;&gt;
+&lt;td style=&quot;height: 40px; width: 132px; text-align: center;&quot;&gt;&lt;strong&gt;&lt;span
+style=&quot;padding-left: 2px; font-size: 14px; font-family:
+verdana, geneva, sans-serif;&quot;&gt;Control&lt;/span&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 40px; width: 280px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Processes can only exercise
+control over child processes.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 40px; width: 354px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-size: 14px; font-family:
+verdana, geneva, sans-serif;&quot;&gt;Threads can exercise
+considerable control over threads of the same process.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 36px;&quot;&gt;
+&lt;td style=&quot;height: 36px; width: 132px; text-align: center;&quot;&gt;&lt;strong&gt;&lt;span
+style=&quot;padding-left: 2px; font-size: 14px; font-family:
+verdana, geneva, sans-serif;&quot;&gt;Changes&lt;/span&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 36px; width: 280px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Any change in the parent
+process does not affect child processes.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 36px; width: 354px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-size: 14px; font-family:
+verdana, geneva, sans-serif;&quot;&gt;Any change in the main
+thread may affect the behavior of the other threads of the
+process.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 27px;&quot;&gt;
+&lt;td style=&quot;height: 27px; width: 132px; text-align: center;&quot;&gt;&lt;strong&gt;&lt;span
+style=&quot;padding-left: 2px; font-size: 14px; font-family:
+verdana, geneva, sans-serif;&quot;&gt;Memory&lt;/span&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 27px; width: 280px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Run in separate memory
+spaces.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 27px; width: 354px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-size: 14px; font-family:
+verdana, geneva, sans-serif;&quot;&gt;Run in shared memory spaces.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 46px;&quot;&gt;
+&lt;td style=&quot;height: 46px; width: 132px; text-align: center;&quot;&gt;&lt;strong&gt;&lt;span
+style=&quot;padding-left: 2px; font-size: 14px; font-family:
+verdana, geneva, sans-serif;&quot;&gt;Controlled by&lt;/span&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 46px; width: 280px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Process is controlled by the
+operating system.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 46px; width: 354px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-size: 14px; font-family:
+verdana, geneva, sans-serif;&quot;&gt;Threads are controlled by
+programmer in a program.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;height: 26px;&quot;&gt;
+&lt;td style=&quot;height: 26px; width: 132px; text-align: center;&quot;&gt;&lt;strong&gt;&lt;span
+style=&quot;padding-left: 2px; font-size: 14px; font-family:
+verdana, geneva, sans-serif;&quot;&gt;Dependence&lt;/span&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 26px; width: 280px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-family: verdana, geneva,
+sans-serif; font-size: 14px;&quot;&gt;Processes are independent.&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&quot;padding-left: 4px; height: 26px; width: 354px;&quot;&gt;&lt;span
+style=&quot;font-weight: 400; font-size: 14px; font-family:
+verdana, geneva, sans-serif;&quot;&gt;Threads are dependent.&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q72. Servlet URL pattern</question>
+         <answer>&lt;html&gt;
+&lt;body dir=&quot;ltr&quot; style=&quot;max-width:8.5in;margin-top:0.7874in; margin-bottom:0.7874in; margin-left:0.7874in; margin-right:0.7874in; &quot;&gt;&lt;h1 class=&quot;P2&quot;&gt;&lt;a id=&quot;a__Servlet_url-pattern&quot;&gt;&lt;span/&gt;&lt;/a&gt;Servlet url-pattern&lt;/h1&gt;&lt;p class=&quot;P1&quot;&gt; &lt;/p&gt;&lt;!--Next &apos;div&apos; was a &apos;text:p&apos;.--&gt;&lt;div class=&quot;P1&quot;&gt;&lt;!--Next &apos;div&apos; is emulating the top hight of a draw:frame.--&gt;&lt;!--Next &apos;
+			div&apos; is a draw:frame.
+		--&gt;&lt;div style=&quot;height:2.6874in;width:6.1807in; padding:0;  float:left; position:relative; left:0cm; &quot; class=&quot;fr1&quot; id=&quot;Image1&quot;&gt;&lt;img style=&quot;height:6.826cm;width:15.699cm;&quot; alt=&quot;&quot; src=&quot;data:image/*;base64,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&quot;/&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;clear:both; line-height:0; width:0; height:0; margin:0; padding:0;&quot;&gt; &lt;/div&gt;&lt;/body&gt;
+&lt;/html&gt;</answer>
+      </QA>
+      <QA>
+         <question>Q73. What is a finally block? Is there a case when finally will not execute?</question>
+         <answer># What is a finally block? Is there a case when finally will not execute?
+Finally block is a block which always execute a set of statements. It is always associated with a try block regardless of any exception that occurs or not. 
+Yes, finally will not be executed if the program exits either by calling System.exit() or by causing a fatal error that causes the process to abort.</answer>
+      </QA>
+      <QA>
+         <question>Q74. What is synchronization?</question>
+         <answer># What is synchronization?
+Synchronization refers to multi-threading. A synchronized block of code can be executed by only one thread at a time. As Java supports execution of multiple threads, two or more threads may access the same fields or objects. Synchronization is a process which keeps all concurrent threads in execution to be in sync. Synchronization avoids memory consistency errors caused due to inconsistent view of shared memory. When a method is declared as synchronized the thread holds the monitor for that method’s object. If another thread is executing the synchronized method the thread is blocked until that thread releases the monitor.</answer>
+      </QA>
+      <QA>
+         <question>Q75. Where these question come from?</question>
+         <answer># Where these question come from?
+
+Reference:
+[75 Interview questions](https://www.edureka.co/blog/interview-questions/java-interview-questions/#basic &quot;75 Interview questions&quot;)
+[https://www.edureka.co/blog/interview-questions/java-interview-questions/#basic]</answer>
       </QA>
    </qaList>
 </KNBase>

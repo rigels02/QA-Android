@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import knbinit.KNBSelector;
 import org.rb.qa.model.KNBase;
 import org.rb.qa.storage.StorageFactories;
 import org.rb.qa.storage.android.InitKNBase;
@@ -28,6 +30,8 @@ public class RestfulClientActivity extends AppCompatActivity {
 
     private static final String STATE = "RECEIVING";
     private static final String PROP_URL = "url";
+    private static final String KNB_FILE = "KNB file: ";
+
     private boolean receiving;
 
     private TextView tvReport;
@@ -131,11 +135,21 @@ public class RestfulClientActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(String... url) {
+
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            String selectedFile = new KNBSelector(sharedPreferences).getSelectedFile();
+            message(KNB_FILE +selectedFile);
             try {
-                new KNBaseService(url[0],this).compareDates();
+                new KNBaseService(
+                        selectedFile,
+                        url[0],
+                        this
+                        ).compareDates();
+
             } catch (Exception e) {
                message(e.getMessage());
             }
+
             return null;
         }
 
@@ -157,12 +171,18 @@ public class RestfulClientActivity extends AppCompatActivity {
 
     private class RestfulClientTask extends AsyncTask<String, String,KNBase> implements INotifier {
 
-
         @Override
         protected KNBase doInBackground(String... url) {
             KNBase knb = null;
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            String selectedFile = new KNBSelector(sharedPreferences).getSelectedFile();
+            message(KNB_FILE +selectedFile);
             try {
-               knb = new KNBaseService(url[0],this).getRemoteData();
+                knb = new KNBaseService(
+                       selectedFile,
+                       url[0],
+                       this
+               ).getRemoteData();
             } catch (Exception e) {
                message(e.getMessage());
                return null;
@@ -208,7 +228,9 @@ public class RestfulClientActivity extends AppCompatActivity {
     }
 
     private OutputStream getOutputStream() throws FileNotFoundException {
-            return openFileOutput(InitKNBase.knbXML, MODE_PRIVATE);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String selectedKNB = new KNBSelector(sharedPreferences).getSelectedFile();
+            return openFileOutput(selectedKNB, MODE_PRIVATE);
 
     }
 
